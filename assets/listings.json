@@ -118,6 +118,25 @@
     "notes": "Open Tue–Sat with varying donation and shopping hours. Accepts up to one bag/box of items per donor per day."
   },
   {
+  "id": "stonewall-studio-ezra",
+  "name": "Ezra at Stonewall Studio",
+  "category": "businesses",
+  "area": "peoria",
+  "short": "Trans-owned barber and stylist offering affirming hair services by appointment in Peoria.",
+  "description": "Ezra at Stonewall Studio provides personalized, gender-affirming hair services in a welcoming and respectful environment. Operating through a private studio setting, Ezra offers cuts and styling tailored to each client’s comfort, identity, and expression. Appointments are booked online, with a focus on creating an affirming experience for trans, nonbinary, and LGBTQ+ clients.",
+  "address": "Peoria, IL",
+  "website": "https://ezstonewallstudio.glossgenius.com/",
+  "tags": [
+    "trans-owned",
+    "barber",
+    "haircuts",
+    "inclusive",
+    "Peoria"
+  ],
+  "notes": "Booking and service details available via GlossGenius. Location details provided after booking."
+},
+
+  {
     "id": "faerae-photography",
     "name": "Fae Rae Photography",
     "category": "businesses",
@@ -268,6 +287,26 @@
     "notes": "Appointments recommended. Open Mon–Sat 9am–9pm."
   },
   {
+  "id": "snyders-barbershop",
+  "name": "Snyder’s Barbershop",
+  "category": "businesses",
+  "area": "peoria",
+  "short": "Traditional barbershop offering haircuts, fades, beard trims, and grooming services in Peoria.",
+  "description": "Snyder’s Barbershop is a Peoria-based barbershop providing classic and modern men’s grooming services, including haircuts, fades, beard trims, and straight-razor work. Known for a straightforward, professional approach, the shop serves clients looking for reliable barbering in a comfortable, no-frills environment.",
+  "address": "7715 N University St, Peoria, IL 61614",
+  "website": "https://www.snydersbarbershop.com/",
+  "tags": [
+    "barbershop",
+    "haircuts",
+    "fades",
+    "beard trims",
+    "grooming",
+    "Peoria"
+  ],
+  "notes": "Appointments and walk-ins may vary by barber. Check the website for hours, services, and booking details."
+},
+
+  {
     "id": "sparkys-ringside-bar-grill",
     "name": "Sparky's Ringside Bar & Grill",
     "category": "nightlife",
@@ -302,4 +341,5 @@
     "notes": "Event nights and hours may vary."
   }
 ]
+
 
