@@ -99,6 +99,9 @@
       if (feats.includes("gender-affirming")) meta.appendChild(badge("Gender-Affirming"));
       if (feats.includes("hiv-sti")) meta.appendChild(badge("HIV/STI"));
       if (feats.includes("prevention")) meta.appendChild(badge("Prevention"));
+      if (feats.includes("sexual-health")) meta.appendChild(badge("Sexual Health"));
+      if (feats.includes("prep-pep")) meta.appendChild(badge("PrEP/PEP"));
+
 
       top.appendChild(title);
       top.appendChild(meta);
@@ -220,3 +223,4 @@
 
   update();
 })();
+
