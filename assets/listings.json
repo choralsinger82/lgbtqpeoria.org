@@ -335,6 +335,26 @@
     "notes": "Phone: (309) 688-3464 • Email: glenoakchristian@sbcglobal.net"
   },
   {
+  "id": "hotshot-hvac",
+  "name": "Hotshot HVAC",
+  "category": "businesses",
+  "area": "peoria",
+  "short": "Trans-owned HVAC service providing residential heating and cooling repair, maintenance, and troubleshooting in Central Illinois.",
+  "description": "Hotshot HVAC is a Central Illinois HVAC service focused on helping homeowners stay comfortable year-round. Services include troubleshooting, repairs, and ongoing maintenance for heating and cooling systems, with an emphasis on clear communication and dependable service.",
+  "address": "610 W Patton Ct, Peoria, IL 61614",
+  "website": "https://www.hotshothvac.com/",
+  "tags": [
+    "trans-owned",
+    "air conditioning",
+    "heating",
+    "HVAC",
+    "maintenance",
+    "repair",
+    "residential"
+  ],
+  "notes": "Call or text: (309) 264-1097 • Email: hotshot.hvac@gmail.com"
+},
+  {
     "id": "imago-dei-church-peoria",
     "name": "Imago Dei Church",
     "category": "faith",
@@ -371,6 +391,26 @@
     ],
     "notes": "Use the Federation website contact page for the most current phone/email and office hours."
   },
+  {
+  "id": "josh-johnston-photography",
+  "name": "Josh Johnston Photography",
+  "category": "businesses",
+  "area": "peoria",
+  "short": "Experienced Peoria photographer specializing in weddings, portraits, headshots, and creative sessions.",
+  "description": "Josh Johnston Photography is a Peoria-area photographer offering a wide range of services including wedding photography, engagement and couples sessions, family and children portraits, senior portraits, headshots, personal branding, and creative ‘You-Phoric’ portrait sessions. Josh brings a documentary and fine-art-inspired approach to capturing moments and creates images that reflect each client’s personality and story. Enthusiastically affirming and serving Peoria and Central Illinois.",
+  "address": "2206 W Ayres Ave, West Peoria, IL 61604",
+  "website": "https://joshjohnstonphoto.com/",
+  "tags": [
+    "photography",
+    "portraits",
+    "weddings",
+    "headshots",
+    "family",
+    "creative sessions",
+    "Peoria"
+  ],
+  "notes": "Phone: (309) 686-2189. Contact via website for booking, portfolio examples, and session details."  
+},
   {
     "id": "kickback-on-fulton",
     "name": "Kickback on Fulton",
@@ -409,6 +449,26 @@
     ],
     "notes": "Owned and operated by Jess (she/they). Typically open Tue–Sat 12pm–6pm."
   },
+  {
+  "id": "olivers-in-the-heights",
+  "name": "Oliver's in the Heights",
+  "category": "nightlife",
+  "area": "central-il",
+  "short": "Peoria Heights bar and restaurant with pizza, cocktails, live music, and popular weekend vibes.",
+  "description": "Oliver's in the Heights is a Peoria Heights spot known for pizza, burgers, cocktails, and a lively bar atmosphere. They host events and draw a social crowd, with Sunday brunch and rotating specials.",
+  "address": "1231 E Samuel Ave, Peoria Heights, IL 61616",
+  "website": "https://www.oliversintheheights.com/",
+  "tags": [
+    "bar",
+    "brunch",
+    "cocktails",
+    "live music",
+    "Peoria Heights",
+    "pizza",
+    "restaurant"
+  ],
+  "notes": "Phone: (309) 681-1779 • Email: kryssi@oliversintheheights.com"
+},
   {
     "id": "peoria-proud",
     "name": "Peoria Proud",
@@ -588,4 +648,5 @@
     "notes": "Use the church website contact page for the most current phone/email and service times."
   }
 ]
+
 
