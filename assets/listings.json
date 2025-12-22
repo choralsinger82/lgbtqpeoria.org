@@ -118,9 +118,90 @@
   "website": "https://www.facebook.com/profile.php?id=61581318163806",
   "tags": ["nightlife", "LGBTQ+", "bar", "19+", "Champaign", "coming soon"],
   "notes": "Coming soon. Phone: (217) 819-6102. Email: Amymyers75@gmail.com. Follow their Facebook page for updates and official opening date."
+},
+  {
+  "id": "positive-health-solutions",
+  "name": "Positive Health Solutions",
+  "category": "health",
+  "area": "peoria",
+  "short": "HIV/STI services, prevention (PrEP), case management, and gender-affirming intake in downtown Peoria.",
+  "description": "Positive Health Solutions (University of Illinois College of Medicine Peoria) provides comprehensive care and support services including HIV testing, PrEP services, case management, and gender-affirming intake alongside clinical services.",
+  "address": "222 NE Monroe St, Suites 901 & 904, Peoria, IL 61602",
+  "website": "https://peoria.medicine.uic.edu/about/patient-care/positive-health-solutions/",
+  "features": [
+    "gender-affirming",
+    "hiv-sti",
+    "prep-pep",
+    "prevention",
+    "case-management"
+  ],
+  "tags": [
+    "healthcare",
+    "HIV testing",
+    "PrEP",
+    "case management",
+    "inclusive care",
+    "Peoria"
+  ],
+  "notes": "Clinic (Suite 904): (309) 671-8484. Case Management / HIV Testing / PrEP / Gender-affirming intake (Suite 901): (309) 671-8457."
+},
+{
+  "id": "central-illinois-friends",
+  "name": "Central Illinois Friends",
+  "category": "community",
+  "area": "peoria",
+  "short": "Community center and clinic services including HIV/STI testing, PrEP/PEP, counseling, and trans health navigation.",
+  "description": "Central Illinois Friends supports the LGBTQI+ community, people living with HIV, and the general public through compassionate, personalized care. Services include sexual health education, HIV/STI testing, PrEP/PEP, safer sex kits, support for people living with HIV, trans health navigation, and a free counseling program for LGBTQ+ folks and their families.",
+  "address": "2112 E War Memorial Dr, Peoria, IL 61614",
+  "website": "https://centralillinoisfriends.org/",
+  "features": [
+    "hiv-sti",
+    "prep-pep",
+    "prevention",
+    "community-center",
+    "counseling",
+    "trans-navigation"
+  ],
+  "tags": [
+    "community center",
+    "HIV/STI testing",
+    "PrEP/PEP",
+    "counseling",
+    "trans health navigation",
+    "education",
+    "Peoria"
+  ],
+  "notes": "Main line: (309) 431-5880. Also has additional locations/clinic days listed on their website."
+},
+{
+  "id": "femmecare-health-and-wellness-center",
+  "name": "FemmeCare Health & Wellness Center",
+  "category": "health",
+  "area": "central-il",
+  "short": "Primary + gyne care with LGBTQ+ specific services including gender-affirming hormone treatment and PrEP/sexual health.",
+  "description": "FemmeCare Health & Wellness Center provides primary and gyne care with LGBTQ+ specific services. Documented offerings include gender-affirming hormone treatment, PrEP and sexual health services, and family building and fertility support (availability varies by region).",
+  "address": "Morton, IL",
+  "website": "https://femmecarehealth.com/primary%2Bgyne-care-1",
+  "features": [
+    "gender-affirming",
+    "prep-pep",
+    "sexual-health",
+    "healthcare"
+  ],
+  "tags": [
+    "primary care",
+    "gyne care",
+    "gender-affirming hormone treatment",
+    "PrEP",
+    "sexual health",
+    "Central Illinois"
+  ],
+  "notes": "Call: (309) 300-0834. Secure texting line: (309) 250-3810. Email: support@femmecarehealth.com."
 }
 
 
 
+
 ]
+
 
