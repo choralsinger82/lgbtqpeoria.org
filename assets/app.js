@@ -3,9 +3,10 @@
   const qEl = document.getElementById("q");
   const catEl = document.getElementById("category");
   const areaEl = document.getElementById("area");
+  const featureEl = document.getElementById("feature");
   const countEl = document.getElementById("count");
 
-  if (!resultsEl || !qEl || !catEl || !areaEl || !countEl) return;
+  if (!resultsEl || !qEl || !catEl || !areaEl || !featureEl || !countEl) return;
 
   function normalize(s) {
     return (s || "")
@@ -16,18 +17,29 @@
   }
 
   function fromHash() {
-    // Supports links like directory.html#cat=health
+    // Supports links like directory.html#cat=health or directory.html#feature=gender-affirming
     const hash = window.location.hash.replace(/^#/, "");
     const params = new URLSearchParams(hash);
+
     const cat = params.get("cat");
     if (cat && [...catEl.options].some(o => o.value === cat)) {
       catEl.value = cat;
     }
+
+    const feature = params.get("feature");
+    if (feature && [...featureEl.options].some(o => o.value === feature)) {
+      featureEl.value = feature;
+    }
   }
 
-  function matchesFilters(item, q, cat, area) {
+  function matchesFilters(item, q, cat, area, feature) {
     if (cat !== "all" && item.category !== cat) return false;
     if (area !== "all" && item.area !== area) return false;
+
+    if (feature !== "all") {
+      const feats = Array.isArray(item.features) ? item.features : [];
+      if (!feats.includes(feature)) return false;
+    }
 
     if (!q) return true;
 
@@ -38,7 +50,8 @@
       item.address,
       item.category,
       item.area,
-      (item.tags || []).join(" ")
+      (item.tags || []).join(" "),
+      (item.features || []).join(" ")
     ].join(" "));
 
     return hay.includes(q);
@@ -80,6 +93,12 @@
       meta.className = "listing-meta";
       meta.appendChild(badge(labelCategory(item.category)));
       meta.appendChild(badge(labelArea(item.area)));
+
+      // Highlight badges based on features
+      const feats = Array.isArray(item.features) ? item.features : [];
+      if (feats.includes("gender-affirming")) meta.appendChild(badge("Gender-Affirming"));
+      if (feats.includes("hiv-sti")) meta.appendChild(badge("HIV/STI"));
+      if (feats.includes("prevention")) meta.appendChild(badge("Prevention"));
 
       top.appendChild(title);
       top.appendChild(meta);
@@ -142,6 +161,7 @@
       health: "Health",
       legal: "Legal",
       businesses: "Businesses",
+      nightlife: "Nightlife",
       events: "Events",
       faith: "Faith & Spiritual"
     };
@@ -167,7 +187,6 @@
   }
 
   function escapeAttr(str) {
-    // Minimal for href attributes
     return (str || "").toString().replaceAll('"', "%22");
   }
 
@@ -187,8 +206,9 @@
     const q = normalize(qEl.value);
     const cat = catEl.value;
     const area = areaEl.value;
+    const feature = featureEl.value;
 
-    const filtered = all.filter(item => matchesFilters(item, q, cat, area));
+    const filtered = all.filter(item => matchesFilters(item, q, cat, area, feature));
     countEl.textContent = `${filtered.length} listing${filtered.length === 1 ? "" : "s"} shown`;
     render(filtered);
   }
@@ -196,6 +216,7 @@
   qEl.addEventListener("input", update);
   catEl.addEventListener("change", update);
   areaEl.addEventListener("change", update);
+  featureEl.addEventListener("change", update);
 
   update();
 })();
