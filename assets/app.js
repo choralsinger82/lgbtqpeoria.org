@@ -2,11 +2,10 @@
   const resultsEl = document.getElementById("results");
   const qEl = document.getElementById("q");
   const catEl = document.getElementById("category");
-  const areaEl = document.getElementById("area");
   const featureEl = document.getElementById("feature");
   const countEl = document.getElementById("count");
 
-  if (!resultsEl || !qEl || !catEl || !areaEl || !featureEl || !countEl) return;
+  if (!resultsEl || !qEl || !catEl ||  !featureEl || !countEl) return;
 
   function normalize(s) {
     return (s || "")
@@ -231,5 +230,6 @@
 
   update();
 })();
+
 
 
