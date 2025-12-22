@@ -197,30 +197,28 @@ h2{ margin: 0 0 10px; font-size: 20px; }
 }
 .tag:hover{ text-decoration:none; }
 
-.filters-row{
-  display:grid;
-  grid-template-columns: 1.3fr .9fr .9fr;
-  gap: 12px;
-  align-items:end;
-}
-.tag {
-  background: #eef2f7;
-  border-radius: 999px;
-  padding: 0.2em 0.6em;
-  font-size: 0.75rem;
+/* Ownership tag highlight (any tag ending in -owned gets data-owner="true" in app.js) */
+.tag[data-owner]{
+  background: rgba(0,255,140,.12);
+  border-color: rgba(0,255,140,.35);
+  color: rgba(255,255,255,.92);
+  font-weight: 700;
 }
 
-.tag[data-owner] {
-  background: #e8f5ee;
-  border: 1px solid #8ac7a1;
-  font-weight: 600;
+.filters-row{
+  display:grid;
+  grid-template-columns: 1.3fr .9fr .9fr .9fr;
+  gap: 12px;
+  align-items:end;
 }
 
 @media (max-width: 820px){
   .filters-row{ grid-template-columns: 1fr; }
 }
+
 .field{ display:flex; flex-direction: column; gap: 6px; }
 .field span{ font-size: 13px; color: var(--muted2); }
+
 input, select, textarea{
   width:100%;
   padding: 10px 12px;
@@ -296,4 +294,3 @@ input:focus, select:focus, textarea:focus{
 }
 .footer-links{ display:flex; gap: 12px; }
 .footer-links a{ color: var(--muted); }
-
