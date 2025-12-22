@@ -137,17 +137,25 @@
         details.appendChild(notes);
       }
 
-      if (item.tags && item.tags.length) {
-        const tagWrap = document.createElement("div");
-        tagWrap.className = "tag-row";
-        for (const t of item.tags) {
-          const a = document.createElement("span");
-          a.className = "tag";
-          a.textContent = t;
-          tagWrap.appendChild(a);
-        }
-        details.appendChild(tagWrap);
-      }
+     if (item.tags && item.tags.length) {
+  const tagWrap = document.createElement("div");
+  tagWrap.className = "tag-row";
+
+  for (const t of item.tags) {
+    const a = document.createElement("span");
+    a.className = "tag";
+    a.textContent = t;
+
+    if (t.endsWith("-owned")) {
+      a.dataset.owner = "true";
+    }
+
+    tagWrap.appendChild(a);
+  }
+
+  details.appendChild(tagWrap);
+}
+
 
       card.appendChild(top);
       card.appendChild(short);
@@ -223,4 +231,5 @@
 
   update();
 })();
+
 
