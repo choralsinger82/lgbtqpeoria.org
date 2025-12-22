@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Submit a Listing | LGBTQ Peoria</title>
+  <meta name="description" content="Submit a business, organization, event, or resource to Rainbow Pages." />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">🏳️‍🌈</div>
+        <div class="brand-text">
+          <div class="brand-title">LGBTQ Peoria</div>
+          <div class="brand-subtitle">Submit a listing</div>
+        </div>
+      </div>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="directory.html">Rainbow Pages</a>
+        <a href="submit.html" aria-current="page">Submit</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container page">
+    <header class="page-head">
+      <h1>Submit a listing</h1>
+      <p class="lead">
+        Have a business, organization, service, event, or resource to add? Submit it here.
+        Listings are reviewed before publication.
+      </p>
+    </header>
+
+    <section class="card">
+      <h2>Quick submission (example)</h2>
+      <p class="muted small">
+        This is a simple starter form. When you’re ready, you can replace it with a Google Form link
+        (recommended for moderation) or a more advanced workflow.
+      </p>
+
+      <!-- Replace action with your own endpoint later if desired -->
+      <form id="submitForm">
+        <div class="form-grid">
+          <label class="field">
+            <span>Listing name</span>
+            <input name="name" required />
+          </label>
+
+          <label class="field">
+            <span>Category</span>
+            <select name="category" required>
+              <option value="">Select…</option>
+              <option value="community">Community</option>
+              <option value="support">Support</option>
+              <option value="health">Health</option>
+              <option value="legal">Legal</option>
+              <option value="businesses">Businesses</option>
+              <option value="events">Events</option>
+              <option value="faith">Faith & Spiritual</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span>Area</span>
+            <select name="area" required>
+              <option value="">Select…</option>
+              <option value="peoria">Peoria</option>
+              <option value="central-il">Central Illinois</option>
+              <option value="virtual">Virtual</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span>Website (optional)</span>
+            <input name="website" type="url" placeholder="https://…" />
+          </label>
+
+          <label class="field">
+            <span>Address (optional)</span>
+            <input name="address" placeholder="Street, City, IL" />
+          </label>
+
+          <label class="field">
+            <span>Contact email (optional)</span>
+            <input name="email" type="email" placeholder="name@example.com" />
+          </label>
+
+          <label class="field field-full">
+            <span>Description (what makes it affirming / what it offers)</span>
+            <textarea name="description" rows="5" required></textarea>
+          </label>
+
+          <label class="field field-full">
+            <span>Any notes (accessibility, cost, appointment needed, etc.)</span>
+            <textarea name="notes" rows="3"></textarea>
+          </label>
+        </div>
+
+        <div class="form-actions">
+          <button class="btn primary" type="submit">Create email draft</button>
+          <a class="btn" href="directory.html">Back to directory</a>
+        </div>
+      </form>
+
+      <div class="small muted" style="margin-top: 10px;">
+        This button will open your email client with a prefilled message. No data is stored on the site.
+      </div>
+    </section>
+
+    <section class="card info">
+      <h2>Moderation promise</h2>
+      <ul class="bullets">
+        <li>Submissions are reviewed for safety, relevance, and clarity.</li>
+        <li>We may edit for formatting or request clarification.</li>
+        <li>Harassment, outing, or doxxing content is not accepted.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>LGBTQ Peoria</strong> • Submissions
+      </div>
+      <div class="footer-links">
+        <a href="directory.html">Rainbow Pages</a>
+        <a href="about.html">About</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Starter: create a mailto draft so you don't need a backend yet.
+    document.getElementById('submitForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const data = new FormData(e.target);
+      const get = (k) => (data.get(k) || "").toString().trim();
+
+      const subject = encodeURIComponent("Rainbow Pages submission: " + get("name"));
+      const bodyLines = [
+        "New Rainbow Pages submission",
+        "",
+        "Name: " + get("name"),
+        "Category: " + get("category"),
+        "Area: " + get("area"),
+        "Website: " + get("website"),
+        "Address: " + get("address"),
+        "Contact email: " + get("email"),
+        "",
+        "Description:",
+        get("description"),
+        "",
+        "Notes:",
+        get("notes"),
+      ];
+      const body = encodeURIComponent(bodyLines.join("\n"));
+
+      // TODO: replace with your real inbox
+      const to = "youremail@example.com";
+      window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
+    });
+  </script>
+</body>
+</html>

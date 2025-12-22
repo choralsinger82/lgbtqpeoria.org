@@ -1,0 +1,149 @@
+[
+  {
+  "id": "lit-on-fire-books",
+  "name": "Lit. on Fire Books",
+  "category": "businesses",
+  "area": "peoria",
+  "short": "Independent bookstore and community hub featuring a curated selection of new and used books and a welcoming, inclusive space.",
+  "description": "Lit. on Fire Books is a women-owned, disabled, and LGBTQ+-owned independent bookstore in Peoria. Serving the community since 2015, it offers a thoughtfully curated selection of new and used books across genres, along with art, zines, and special events. The shop serves as a creative, inclusive gathering place and hosts community activities, literary experiences, and engaging conversations. Visit to explore unique titles, connect with local readers, and support a community-focused business.",
+  "address": "712 W Main St, Peoria, IL 61606",
+  "website": "http://www.litonfirepia.com",
+  "tags": ["bookstore", "independent books", "used books", "community hub", "inclusive", "events"],
+  "notes": "Owned and operated by Jess (she/they). Regular hours are typically Tuesday–Saturday 12pm–6pm; closed Sunday and Monday. Known as a welcoming space for diverse voices and community events. Source: local listing information and business profile. :contentReference[oaicite:1]{index=1}"
+},
+  {
+    "id": "affirming-therapy",
+    "name": "Affirming Therapy Network (Example)",
+    "category": "health",
+    "area": "virtual",
+    "short": "A curated list of affirming providers and mental health resources.",
+    "description": "Example listing. Use this style for therapists, clinics, support services, telehealth, etc.",
+    "address": "",
+    "website": "https://example.com",
+    "tags": ["therapy", "telehealth", "mental health"],
+    "notes": "Consider noting insurance, sliding scale, waitlists, and crisis resources."
+  },
+  {
+    "id": "queer-friendly-coffee",
+    "name": "Queer-Friendly Coffee Spot (Example)",
+    "category": "businesses",
+    "area": "peoria",
+    "short": "A welcoming space for community hangouts and casual meetups.",
+    "description": "Example listing. For businesses, include what makes it welcoming (staff training, signage, hosting events, etc.).",
+    "address": "Peoria, IL",
+    "website": "",
+    "tags": ["coffee", "hangout", "friendly"],
+    "notes": "Add hours, accessibility, and any event nights."
+  },
+  {
+  "id": "rebel-roots-hair-haus",
+  "name": "Rebel Roots Hair Haus",
+  "category": "businesses",
+  "area": "peoria",
+  "short": "Inclusive and creative hair salon offering cuts, color, styling, and personalized hair services in Peoria.",
+  "description": "Rebel Roots Hair Haus is a dynamic and inclusive hair salon in Peoria that encourages creativity and self-expression. The team of experienced stylists provides a wide range of services including haircuts, custom color, highlights, extensions, scalp treatments, and more, all tailored to each client’s vision. With a relaxed and welcoming atmosphere, Rebel Roots focuses on personalized approaches and artistic results for every visit. They are known for embracing individuality and creating looks that help clients feel their best. Services are by appointment, and the salon aims to provide a comfortable, respectful experience for all clients. Website: https://www.rebelrootshairhaus.com Contact: (309) 251-1950.",
+  "address": "5901 N Prospect Rd, Suite 107, Peoria, IL 61614",
+  "website": "https://www.rebelrootshairhaus.com",
+  "tags": ["hair salon", "cuts", "color", "extensions", "creative style", "inclusive", "Peoria"],
+  "notes": "Appointments recommended. Known for personalized consultations, creative hair color, and individualized styling. Open 9 AM–9 PM Monday through Saturday; closed Sunday. Source: salon website and listings online."
+},
+{
+  "id": "enough-stuff-club",
+  "name": "Enough Stuff",
+  "category": "community",
+  "area": "east-peoria",
+  "short": "Free thrift store and community space offering donated items to anyone in need at no cost.",
+  "description": "Enough Stuff is a community-focused free thrift store in East Peoria where donated items — including clothing, household goods, books, hygiene products, and food pantry items — are given away for free to anyone who visits. They accept donations such as clothing, games, cookware, and personal items to help support the community and reduce waste. There’s no cost and no ID required to shop, and the space serves as a welcoming community resource. Contact info: phone (309) 868-2684, email contact@enoughstuffclub.com.",
+  "address": "422 E Washington St, Suite 100, East Peoria, IL 61611",
+  "website": "https://www.enoughstuffclub.com",
+  "tags": ["free thrift", "community resource", "donations", "East Peoria", "household goods", "clothing", "food pantry"],
+  "notes": "Open Tue–Sat with varying donation and shopping hours. Accepts up to one bag/box of items per donor per day. Everything inside is free; donations are welcome. Consult their Facebook page for unexpected closures and community announcements. Sources: official site and local listings. :contentReference[oaicite:2]{index=2}"
+},
+{
+  "id": "club-diesel-peoria",
+  "name": "Club Diesel",
+  "category": "nightlife",
+  "area": "peoria",
+  "short": "High-energy downtown nightclub with DJs, dancing, and an inclusive nightlife crowd.",
+  "description": "Club Diesel is a longtime downtown Peoria nightclub known for its energetic dance floor, DJs, themed nights, and late-night atmosphere. The club draws a diverse crowd and is widely regarded as a welcoming nightlife space for LGBTQ+ patrons and allies.",
+  "address": "629 Main St, Peoria, IL 61602",
+  "website": "https://www.facebook.com/dieselpeoria/",
+  "tags": ["nightclub", "dance", "music", "inclusive", "Peoria nightlife"],
+  "notes": "Typically open late. Check social media for themed nights and special events."
+},
+{
+  "id": "sparkys-ringside-bar-grill",
+  "name": "Sparky's Ringside Bar & Grill",
+  "category": "nightlife",
+  "area": "peoria",
+  "short": "Neighborhood bar and grill with pool tables, affordable drinks, and a laid-back vibe.",
+  "description": "Sparky’s Ringside Bar & Grill is a casual neighborhood bar in Peoria known for its relaxed atmosphere, friendly staff, pool tables, and straightforward bar-and-grill menu. It’s a longtime local hangout for conversation and low-key nights out.",
+  "address": "1914 N Wisconsin Ave, Peoria, IL 61603",
+  "website": "",
+  "tags": ["bar", "grill", "pool", "casual", "neighborhood"],
+  "notes": "Primarily a local hangout. Hours and specials may vary."
+},
+{
+  "id": "kickback-on-fulton",
+  "name": "Kickback on Fulton",
+  "category": "nightlife",
+  "area": "peoria",
+  "short": "LGBTQ-owned neighborhood bar offering a relaxed, welcoming atmosphere downtown.",
+  "description": "Kickback on Fulton is an LGBTQ-owned bar in downtown Peoria known for its laid-back environment, friendly bartenders, and community-focused vibe. The space is designed for casual nights out, conversation, and socializing, making it a comfortable stop for both locals and visitors.",
+  "address": "456 Fulton St #105, Peoria, IL 61602",
+  "website": "",
+  "tags": ["bar", "LGBTQ-owned", "inclusive", "casual", "downtown"],
+  "notes": "Good option for low-key evenings. Hours may vary by day."
+},
+{
+  "id": "the-bistro-bloomington",
+  "name": "The Bistro (The B)",
+  "category": "nightlife",
+  "area": "central-il",
+  "short": "Nightlife bar and dance spot with a diverse and social crowd in Bloomington.",
+  "description": "The Bistro, commonly called The B, is a nightlife bar in Bloomington offering drinks, dancing, and a casual social atmosphere. It attracts a mixed crowd and serves as a regional nightlife option for those traveling between Central Illinois cities.",
+  "address": "316 N Main St, Bloomington, IL 61701",
+  "website": "",
+  "tags": ["nightlife", "bar", "dance", "Bloomington"],
+  "notes": "Event nights and hours may vary."
+},
+{
+  "id": "anthem-champaign",
+  "name": "Anthem",
+  "category": "nightlife",
+  "area": "central-il",
+  "short": "19+ nightclub in Champaign featuring a dance floor and late-night events.",
+  "description": "Anthem is a 19+ nightclub in Champaign known for its dance floor, DJs, and energetic nightlife. It serves as a popular stop for students and locals looking for music-driven late-night events.",
+  "address": "320 N Neil St, Champaign, IL 61820",
+  "website": "",
+  "tags": ["nightclub", "dance", "19+", "Champaign"],
+  "notes": "Age policy is 19+. Check event listings for DJs and theme nights."
+},
+{
+  "id": "clique-springfield",
+  "name": "Clique",
+  "category": "nightlife",
+  "area": "central-il",
+  "short": "LGBTQ+ bar and nightclub known for drag shows, dancing, and community nightlife.",
+  "description": "Clique is an LGBTQ+ bar and nightclub in Springfield offering a welcoming environment, drag performances, themed nights, and a lively dance floor. It’s a popular social space for the LGBTQ+ community and allies in the Springfield area.",
+  "address": "411 E Washington St, Springfield, IL 62701",
+  "website": "http://www.facebook.com/clique217",
+  "tags": ["LGBTQ+", "nightclub", "drag", "dance", "Springfield"],
+  "notes": "Known for drag shows and weekend events. Check social media for schedules."
+},
+{
+  "id": "amys-place-champaign",
+  "name": "Amy's Place",
+  "category": "nightlife",
+  "area": "central-il",
+  "short": "Champaign LGBTQ+ bar (19+) — coming soon. Open 5pm–2am daily.",
+  "description": "Amy's Place is a new LGBTQ+ bar in Champaign welcoming both the community and allies. The venue is 19+ and plans to be open from 5pm to 2am every day. Everyone is welcome in this inclusive space. As a new establishment, check their Facebook page for opening announcements and events.",
+  "address": "120 N First Street, Champaign, IL 61820",
+  "website": "https://www.facebook.com/profile.php?id=61581318163806",
+  "tags": ["nightlife", "LGBTQ+", "bar", "19+", "Champaign", "coming soon"],
+  "notes": "Coming soon. Phone: (217) 819-6102. Email: Amymyers75@gmail.com. Follow their Facebook page for updates and official opening date."
+}
+
+
+
+]
