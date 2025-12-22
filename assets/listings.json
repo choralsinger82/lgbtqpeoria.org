@@ -358,8 +358,168 @@
       "nightlife"
     ],
     "notes": "Event nights and hours may vary."
+  },
+  [
+  {
+    "id": "congregation-anshai-emeth-peoria",
+    "name": "Congregation Anshai Emeth",
+    "category": "faith",
+    "area": "peoria",
+    "short": "Reform Jewish congregation in Peoria offering worship, learning, and community.",
+    "description": "Congregation Anshai Emeth is a Reform Jewish synagogue serving the Peoria area with Shabbat worship, lifecycle events, education, and community programming. It’s listed by Peoria Proud as an affirming faith community.",
+    "address": "5614 N University St, Peoria, IL 61614",
+    "website": "https://www.anshaiemeth.org/",
+    "features": [],
+    "tags": ["affirming", "community", "jewish", "reform judaism", "synagogue", "worship"],
+    "notes": "Use the synagogue website contact page for the most current phone/email and service times."
+  },
+  {
+    "id": "community-ucc-morton",
+    "name": "Community United Church of Christ (Morton)",
+    "category": "faith",
+    "area": "central-il",
+    "short": "United Church of Christ congregation in Morton focused on worship and community life.",
+    "description": "Community United Church of Christ is a UCC congregation in Morton offering worship services, pastoral care, and community involvement. It’s listed by Peoria Proud as an affirming faith community.",
+    "address": "1575 W Jefferson St, Morton, IL 61550",
+    "website": "https://www.mortoncucc.org/",
+    "features": [],
+    "tags": ["affirming", "church", "community", "ucc", "united church of christ", "worship"],
+    "notes": "Use the church website contact page for the most current phone/email and service times."
+  },
+  {
+    "id": "first-baptist-church-peoria",
+    "name": "First Baptist Church of Peoria",
+    "category": "faith",
+    "area": "peoria",
+    "short": "Historic Baptist church in Peoria with worship services and community ministries.",
+    "description": "First Baptist Church of Peoria is a longtime Peoria congregation offering worship, faith formation, and community ministries. It’s listed by Peoria Proud as an affirming faith community.",
+    "address": "411 W Lake Ave, Peoria, IL 61614",
+    "website": "https://fbcpeoria.org/",
+    "features": [],
+    "tags": ["affirming", "baptist", "church", "community", "worship"],
+    "notes": "Phone: (309) 682-5491 • Email: office@fbcpeoria.org"
+  },
+  {
+    "id": "first-christian-church-peoria",
+    "name": "First Christian Church (Disciples of Christ) — Peoria",
+    "category": "faith",
+    "area": "peoria",
+    "short": "Disciples of Christ congregation in Peoria with worship, service, and community life.",
+    "description": "First Christian Church (Disciples of Christ) in Peoria is a Christian congregation offering worship, community connection, and service opportunities. It’s listed by Peoria Proud as an affirming faith community.",
+    "address": "6400 N University St, Peoria, IL 61614",
+    "website": "https://fccpeoria.org/",
+    "features": [],
+    "tags": ["affirming", "church", "community", "disciples of christ", "worship"],
+    "notes": "Use the church website contact page for the most current phone/email and service times."
+  },
+  {
+    "id": "first-congregational-ucc-canton",
+    "name": "First Congregational UCC (Canton)",
+    "category": "faith",
+    "area": "central-il",
+    "short": "United Church of Christ congregation in Canton offering worship and community care.",
+    "description": "First Congregational UCC is a Canton-based United Church of Christ congregation offering worship, pastoral care, and community engagement. It’s listed by Peoria Proud as an affirming faith community.",
+    "address": "725 N Main St, Canton, IL 61520",
+    "website": "https://canton-ucc.org/",
+    "features": [],
+    "tags": ["affirming", "church", "community", "ucc", "united church of christ", "worship"],
+    "notes": "Use the church website contact page for the most current phone/email and service times."
+  },
+  {
+    "id": "glen-oak-christian-church-peoria",
+    "name": "Glen Oak Christian Church",
+    "category": "faith",
+    "area": "peoria",
+    "short": "Peoria church offering worship and community life (listed as affirming by Peoria Proud).",
+    "description": "Glen Oak Christian Church is a Peoria congregation offering worship services and community connection. It’s listed by Peoria Proud as an affirming faith community.",
+    "address": "1115 E Republic St, Peoria, IL 61603",
+    "website": "https://www.glenoakchurch.org/",
+    "features": [],
+    "tags": ["affirming", "church", "community", "worship"],
+    "notes": "Phone: (309) 688-3464 • Email: glenoakchristian@sbcglobal.net"
+  },
+  {
+    "id": "imago-dei-church-peoria",
+    "name": "Imago Dei Church",
+    "category": "faith",
+    "area": "peoria",
+    "short": "Christian church in Peoria focused on worship, discipleship, and community life.",
+    "description": "Imago Dei Church is a Christian congregation in Peoria offering worship services, spiritual formation, and community connection. It’s listed by Peoria Proud as an affirming faith community.",
+    "address": "7620 N University St, Peoria, IL 61614",
+    "website": "https://www.imagodeichurch.org/",
+    "features": [],
+    "tags": ["affirming", "church", "community", "worship"],
+    "notes": "Use the church website contact page for the most current phone/email and service times."
+  },
+  {
+    "id": "jewish-federation-of-peoria",
+    "name": "Jewish Federation of Peoria",
+    "category": "faith",
+    "area": "peoria",
+    "short": "Jewish community organization supporting connection, programs, and services in Peoria.",
+    "description": "The Jewish Federation of Peoria supports Jewish life in the region through community programs, connection, and services. It’s listed by Peoria Proud as an affirming faith community resource.",
+    "address": "429 W Lake Ave, Peoria, IL 61614",
+    "website": "https://www.jewishpeoria.org/",
+    "features": [],
+    "tags": ["affirming", "community", "jewish", "resources", "support"],
+    "notes": "Use the Federation website contact page for the most current phone/email and office hours."
+  },
+  {
+    "id": "st-pauls-episcopal-church-peoria",
+    "name": "St. Paul’s Episcopal Church",
+    "category": "faith",
+    "area": "peoria",
+    "short": "Episcopal church in Peoria offering worship and congregational life.",
+    "description": "St. Paul’s Episcopal Church is an Episcopal congregation in Peoria offering worship services, pastoral care, and community life. It’s listed by Peoria Proud as an affirming faith community.",
+    "address": "4714 N University St, Peoria, IL 61614",
+    "website": "https://www.stpaulspeoria.org/",
+    "features": [],
+    "tags": ["affirming", "church", "episcopal", "community", "worship"],
+    "notes": "Use the church website contact page for the most current phone/email and service times."
+  },
+  {
+    "id": "the-bridge-umc-washington",
+    "name": "The Bridge United Methodist Church (Washington)",
+    "category": "faith",
+    "area": "central-il",
+    "short": "United Methodist church in Washington offering worship, groups, and community support.",
+    "description": "The Bridge United Methodist Church is a Washington, IL congregation offering worship services, small groups, and community engagement. It’s listed by Peoria Proud as an affirming faith community.",
+    "address": "113 S Main St, Washington, IL 61571",
+    "website": "https://www.thebridgeumc.org/",
+    "features": [],
+    "tags": ["affirming", "church", "community", "united methodist", "worship"],
+    "notes": "Use the church website contact page for the most current phone/email and service times."
+  },
+  {
+    "id": "united-presbyterian-church-peoria",
+    "name": "United Presbyterian Church of Peoria",
+    "category": "faith",
+    "area": "peoria",
+    "short": "Presbyterian (PCUSA) congregation in Peoria with worship, ministries, and community life.",
+    "description": "United Presbyterian Church of Peoria is a PC(USA) congregation offering worship services, ministries, and community engagement. It’s listed by Peoria Proud as an affirming faith community.",
+    "address": "2400 W Northmoor Rd, Peoria, IL 61614",
+    "website": "https://www.unitedpc.org/",
+    "features": [],
+    "tags": ["affirming", "church", "community", "pcusa", "presbyterian", "worship"],
+    "notes": "Phone: (309) 693-2002 • Email: upc@unitedpc.org"
+  },
+  {
+    "id": "universalist-unitarian-church-of-peoria",
+    "name": "Universalist Unitarian Church of Peoria",
+    "category": "faith",
+    "area": "peoria",
+    "short": "Unitarian Universalist congregation in Peoria focused on inclusion, justice, and community.",
+    "description": "Universalist Unitarian Church of Peoria is a UU congregation offering services and community programs centered on spiritual exploration, inclusion, and social justice. It’s listed by Peoria Proud as an affirming faith community.",
+    "address": "3000 W Richwoods Blvd, Peoria, IL 61604",
+    "website": "https://peoriauuchurch.org/",
+    "features": [],
+    "tags": ["affirming", "community", "unitarian universalist", "uu", "worship"],
+    "notes": "Use the church website contact page for the most current phone/email and service times."
   }
 ]
+
+]
+
 
 
 
