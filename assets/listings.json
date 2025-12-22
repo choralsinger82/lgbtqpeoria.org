@@ -35,6 +35,43 @@
     ],
     "notes": "Age policy is 19+. Check event listings for DJs and theme nights."
   },
+  
+  {
+    "id": "the-bistro-bloomington",
+    "name": "The Bistro (The B)",
+    "category": "nightlife",
+    "area": "central-il",
+    "short": "Nightlife bar and dance spot with a diverse and social crowd in Bloomington.",
+    "description": "The Bistro is a nightlife bar in Bloomington offering drinks, dancing, and a casual social atmosphere.",
+    "address": "316 N Main St, Bloomington, IL 61701",
+    "website": "",
+    "tags": [
+      "bar",
+      "Bloomington",
+      "dance",
+      "nightlife"
+    ],
+    "notes": "Event nights and hours may vary."
+  },
+  {
+    "id": "the-bridge-umc-washington",
+    "name": "The Bridge United Methodist Church (Washington)",
+    "category": "faith",
+    "area": "central-il",
+    "short": "United Methodist church in Washington offering worship, groups, and community support.",
+    "description": "The Bridge United Methodist Church is a Washington, IL congregation offering worship services, small groups, and community engagement. It’s listed by Peoria Proud as an affirming faith community.",
+    "address": "113 S Main St, Washington, IL 61571",
+    "website": "https://www.thebridgeumc.org/",
+    "features": [],
+    "tags": [
+      "affirming",
+      "church",
+      "community",
+      "united methodist",
+      "worship"
+    ],
+    "notes": "Use the church website contact page for the most current phone/email and service times."
+  },
   {
     "id": "central-illinois-friends",
     "name": "Central Illinois Friends",
@@ -511,43 +548,7 @@
     ],
     "notes": "Live music typically Thursdays and open mic Sundays. Hours and events may vary—check social media or call ahead."
   },
-  {
-    "id": "the-bridge-umc-washington",
-    "name": "The Bridge United Methodist Church (Washington)",
-    "category": "faith",
-    "area": "central-il",
-    "short": "United Methodist church in Washington offering worship, groups, and community support.",
-    "description": "The Bridge United Methodist Church is a Washington, IL congregation offering worship services, small groups, and community engagement. It’s listed by Peoria Proud as an affirming faith community.",
-    "address": "113 S Main St, Washington, IL 61571",
-    "website": "https://www.thebridgeumc.org/",
-    "features": [],
-    "tags": [
-      "affirming",
-      "church",
-      "community",
-      "united methodist",
-      "worship"
-    ],
-    "notes": "Use the church website contact page for the most current phone/email and service times."
-  },
-  {
-    "id": "the-bistro-bloomington",
-    "name": "The Bistro (The B)",
-    "category": "nightlife",
-    "area": "central-il",
-    "short": "Nightlife bar and dance spot with a diverse and social crowd in Bloomington.",
-    "description": "The Bistro is a nightlife bar in Bloomington offering drinks, dancing, and a casual social atmosphere.",
-    "address": "316 N Main St, Bloomington, IL 61701",
-    "website": "",
-    "tags": [
-      "bar",
-      "Bloomington",
-      "dance",
-      "nightlife"
-    ],
-    "notes": "Event nights and hours may vary."
-  },
-  {
+    {
     "id": "united-presbyterian-church-peoria",
     "name": "United Presbyterian Church of Peoria",
     "category": "faith",
@@ -587,3 +588,4 @@
     "notes": "Use the church website contact page for the most current phone/email and service times."
   }
 ]
+
