@@ -221,11 +221,30 @@
   "notes": "Email: faeraephotography@yahoo.com. Studio in Chillicothe serving the greater Peoria area. Specializes in portrait and event photography."
 }
 
+{
+  "id": "peoria-proud",
+  "name": "Peoria Proud",
+  "category": "community",
+  "area": "peoria",
+  "short": "LGBTQIA+ advocacy and community organization supporting equity, visibility, and connection in Peoria.",
+  "description": "Peoria Proud is a local LGBTQIA+ advocacy and community organization dedicated to promoting diversity, equity, and inclusion throughout the Greater Peoria area. The organization supports the LGBTQIA+ community through outreach, education, visibility efforts, and community events that foster connection and belonging.",
+  "address": "2112 E. War Memorial Dr., Box 02, Peoria, IL 61614",
+  "website": "https://www.peoriaproud.org/",
+  "tags": [
+    "community organization",
+    "LGBTQ+ advocacy",
+    "events",
+    "support",
+    "Peoria"
+  ],
+  "notes": "Contact email: admin@peoriaproud.org. Follow Peoria Proud online for community updates, events, and local initiatives."
+}
 
 
 
 
 ]
+
 
 
 
