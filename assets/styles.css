@@ -201,23 +201,23 @@ h2{ margin: 0 0 10px; font-size: 20px; }
 .tag[data-owner]{
   background: linear-gradient(
     135deg,
-    rgba(125, 211, 252, 0.28),
-    rgba(167, 139, 250, 0.28)
+    rgba(225, 70, 110, 0.28),   /* coral-magenta */
+    rgba(120, 30, 60, 0.28)     /* deep wine */
   );
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  color: #f8faff;
+  border: 1px solid rgba(225, 70, 110, 0.6);
+  color: #fff2f6;
   font-weight: 800;
-  letter-spacing: 0.2px;
+  letter-spacing: 0.25px;
   box-shadow:
-    0 0 0 1px rgba(255,255,255,.15),
-    0 8px 20px rgba(0,0,0,.35);
+    0 0 0 1px rgba(225,70,110,.25),
+    0 8px 22px rgba(0,0,0,.4);
 }
 
 .tag[data-owner]::before{
   content: "●";
   margin-right: 0.35em;
   font-size: 0.6em;
-  opacity: 0.85;
+  opacity: 0.9;
 }
 
 .filters-row{
