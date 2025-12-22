@@ -199,10 +199,17 @@ h2{ margin: 0 0 10px; font-size: 20px; }
 
 /* Ownership tag highlight (any tag ending in -owned gets data-owner="true" in app.js) */
 .tag[data-owner]{
-  background: rgba(0,255,140,.12);
-  border-color: rgba(0,255,140,.35);
-  color: rgba(255,255,255,.92);
+  background: linear-gradient(
+    135deg,
+    rgba(0, 255, 140, 0.22),
+    rgba(125, 211, 252, 0.18)
+  );
+  border-color: rgba(0, 255, 140, 0.6);
+  color: #eafff4;
   font-weight: 700;
+  box-shadow:
+    0 0 0 1px rgba(0,255,140,.25),
+    0 0 14px rgba(0,255,140,.25);
 }
 
 .filters-row{
@@ -294,3 +301,4 @@ input:focus, select:focus, textarea:focus{
 }
 .footer-links{ display:flex; gap: 12px; }
 .footer-links a{ color: var(--muted); }
+
