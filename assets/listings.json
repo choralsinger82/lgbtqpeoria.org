@@ -12,30 +12,6 @@
   "notes": "Owned and operated by Jess (she/they). Regular hours are typically Tuesday–Saturday 12pm–6pm; closed Sunday and Monday. Known as a welcoming space for diverse voices and community events. Source: local listing information and business profile. :contentReference[oaicite:1]{index=1}"
 },
   {
-    "id": "affirming-therapy",
-    "name": "Affirming Therapy Network (Example)",
-    "category": "health",
-    "area": "virtual",
-    "short": "A curated list of affirming providers and mental health resources.",
-    "description": "Example listing. Use this style for therapists, clinics, support services, telehealth, etc.",
-    "address": "",
-    "website": "https://example.com",
-    "tags": ["therapy", "telehealth", "mental health"],
-    "notes": "Consider noting insurance, sliding scale, waitlists, and crisis resources."
-  },
-  {
-    "id": "queer-friendly-coffee",
-    "name": "Queer-Friendly Coffee Spot (Example)",
-    "category": "businesses",
-    "area": "peoria",
-    "short": "A welcoming space for community hangouts and casual meetups.",
-    "description": "Example listing. For businesses, include what makes it welcoming (staff training, signage, hosting events, etc.).",
-    "address": "Peoria, IL",
-    "website": "",
-    "tags": ["coffee", "hangout", "friendly"],
-    "notes": "Add hours, accessibility, and any event nights."
-  },
-  {
   "id": "rebel-roots-hair-haus",
   "name": "Rebel Roots Hair Haus",
   "category": "businesses",
@@ -147,3 +123,4 @@
 
 
 ]
+
