@@ -324,6 +324,25 @@
     "notes": "Primarily a local hangout. Hours and specials may vary."
   },
   {
+  "id": "tartan-inn-west-peoria",
+  "name": "Tartan Inn",
+  "category": "nightlife",
+  "area": "west-peoria",
+  "short": "Longtime neighborhood bar in West Peoria with live music, open mic nights, and a relaxed local vibe.",
+  "description": "Tartan Inn is a cozy, longtime neighborhood bar in West Peoria known for its friendly staff, classic bar atmosphere, and strong local following. The bar regularly hosts live music on Thursday nights and open mic events on Sundays, making it a popular gathering spot for casual nights out and local performers.",
+  "address": "428 N Waverly Ave, West Peoria, IL 61604",
+  "website": "",
+  "tags": [
+    "bar",
+    "live music",
+    "nightlife",
+    "open mic",
+    "West Peoria"
+  ],
+  "notes": "Live music typically Thursdays and open mic Sundays. Hours and events may vary—check social media or call ahead."
+},
+
+  {
     "id": "the-bistro-bloomington",
     "name": "The Bistro (The B)",
     "category": "nightlife",
@@ -341,5 +360,6 @@
     "notes": "Event nights and hours may vary."
   }
 ]
+
 
 
