@@ -5,7 +5,7 @@
   const featureEl = document.getElementById("feature");
   const countEl = document.getElementById("count");
 
-  if (!resultsEl || !qEl || !catEl ||  !featureEl || !countEl) return;
+  if (!resultsEl || !qEl || !catEl || !featureEl || !countEl) return;
 
   function normalize(s) {
     return (s || "")
@@ -16,7 +16,9 @@
   }
 
   function fromHash() {
-    // Supports links like directory.html#cat=health or directory.html#feature=gender-affirming
+    // Supports links like:
+    // directory.html#cat=health
+    // directory.html#feature=gender-affirming
     const hash = window.location.hash.replace(/^#/, "");
     const params = new URLSearchParams(hash);
 
@@ -31,9 +33,8 @@
     }
   }
 
-  function matchesFilters(item, q, cat, area, feature) {
+  function matchesFilters(item, q, cat, feature) {
     if (cat !== "all" && item.category !== cat) return false;
-    if (area !== "all" && item.area !== area) return false;
 
     if (feature !== "all") {
       const feats = Array.isArray(item.features) ? item.features : [];
@@ -48,6 +49,7 @@
       item.description,
       item.address,
       item.category,
+      // Keep area searchable even though it’s not a filter:
       item.area,
       (item.tags || []).join(" "),
       (item.features || []).join(" ")
@@ -56,9 +58,9 @@
     return hay.includes(q);
   }
 
-  function badge(text) {
+  function badge(text, extraClass = "") {
     const span = document.createElement("span");
-    span.className = "pill";
+    span.className = `pill${extraClass ? " " + extraClass : ""}`;
     span.textContent = text;
     return span;
   }
@@ -90,17 +92,21 @@
 
       const meta = document.createElement("div");
       meta.className = "listing-meta";
-      meta.appendChild(badge(labelCategory(item.category)));
-      meta.appendChild(badge(labelArea(item.area)));
 
-      // Highlight badges based on features
+      // Always show category
+      meta.appendChild(badge(labelCategory(item.category)));
+
+      // Feature highlight badges
       const feats = Array.isArray(item.features) ? item.features : [];
       if (feats.includes("gender-affirming")) meta.appendChild(badge("Gender-Affirming"));
       if (feats.includes("hiv-sti")) meta.appendChild(badge("HIV/STI"));
       if (feats.includes("prevention")) meta.appendChild(badge("Prevention"));
       if (feats.includes("sexual-health")) meta.appendChild(badge("Sexual Health"));
       if (feats.includes("prep-pep")) meta.appendChild(badge("PrEP/PEP"));
-
+      if (feats.includes("counseling")) meta.appendChild(badge("Counseling"));
+      if (feats.includes("case-management")) meta.appendChild(badge("Case Mgmt"));
+      if (feats.includes("trans-navigation")) meta.appendChild(badge("Trans Navigation"));
+      if (feats.includes("community-center")) meta.appendChild(badge("Community Center"));
 
       top.appendChild(title);
       top.appendChild(meta);
@@ -136,25 +142,25 @@
         details.appendChild(notes);
       }
 
-     if (item.tags && item.tags.length) {
-  const tagWrap = document.createElement("div");
-  tagWrap.className = "tag-row";
+      // Tags (ownership tags styled via data-owner)
+      if (item.tags && item.tags.length) {
+        const tagWrap = document.createElement("div");
+        tagWrap.className = "tag-row";
 
-  for (const t of item.tags) {
-    const a = document.createElement("span");
-    a.className = "tag";
-    a.textContent = t;
+        for (const t of item.tags) {
+          const tag = document.createElement("span");
+          tag.className = "tag";
+          tag.textContent = t;
 
-    if (t.endsWith("-owned")) {
-      a.dataset.owner = "true";
-    }
+          if (t.endsWith("-owned")) {
+            tag.dataset.owner = "true";
+          }
 
-    tagWrap.appendChild(a);
-  }
+          tagWrap.appendChild(tag);
+        }
 
-  details.appendChild(tagWrap);
-}
-
+        details.appendChild(tagWrap);
+      }
 
       card.appendChild(top);
       card.appendChild(short);
@@ -176,15 +182,6 @@
       faith: "Faith & Spiritual"
     };
     return map[cat] || cat;
-  }
-
-  function labelArea(area) {
-    const map = {
-      peoria: "Peoria",
-      "central-il": "Central Illinois",
-      virtual: "Virtual"
-    };
-    return map[area] || area;
   }
 
   function escapeHtml(str) {
@@ -215,21 +212,16 @@
   function update() {
     const q = normalize(qEl.value);
     const cat = catEl.value;
-    const area = areaEl.value;
     const feature = featureEl.value;
 
-    const filtered = all.filter(item => matchesFilters(item, q, cat, area, feature));
+    const filtered = all.filter(item => matchesFilters(item, q, cat, feature));
     countEl.textContent = `${filtered.length} listing${filtered.length === 1 ? "" : "s"} shown`;
     render(filtered);
   }
 
   qEl.addEventListener("input", update);
   catEl.addEventListener("change", update);
-  areaEl.addEventListener("change", update);
   featureEl.addEventListener("change", update);
 
   update();
 })();
-
-
-
