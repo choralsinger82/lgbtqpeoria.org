@@ -202,23 +202,25 @@
     "notes": "Owned and operated by Jess (she/they). Typically open Tue–Sat 12pm–6pm."
   },
   {
-    "id": "peoria-proud",
-    "name": "Peoria Proud",
-    "category": "community",
-    "area": "peoria",
-    "short": "LGBTQIA+ advocacy and community organization supporting equity, visibility, and connection in Peoria.",
-    "description": "Peoria Proud is a local LGBTQIA+ advocacy and community organization dedicated to promoting diversity, equity, and inclusion.",
-    "address": "2112 E. War Memorial Dr., Box 02, Peoria, IL 61614",
-    "website": "https://www.peoriaproud.org/",
-    "tags": [
-      "community organization",
-      "events",
-      "LGBTQ+ advocacy",
-      "Peoria",
-      "support"
-    ],
-    "notes": "Contact email: admin@peoriaproud.org."
-  },
+  "id": "peoria-proud",
+  "name": "Peoria Proud",
+  "category": "community",
+  "area": "peoria",
+  "short": "LGBTQIA+ advocacy organization and primary organizer of River City Pride Festival and other LGBTQ-centered events in Peoria.",
+  "description": "Peoria Proud is a local LGBTQIA+ advocacy and community organization dedicated to promoting diversity, equity, and inclusion throughout the Greater Peoria area. The organization is the primary organizer of River City Pride Festival and coordinates additional LGBTQ-centered events, outreach efforts, and visibility initiatives throughout the year. Through advocacy, education, and community programming, Peoria Proud works to foster connection, representation, and belonging for LGBTQIA+ people and allies across Central Illinois.",
+  "address": "2112 E. War Memorial Dr., Box 02, Peoria, IL 61614",
+  "website": "https://www.peoriaproud.org/",
+  "tags": [
+    "community organization",
+    "event organizers",
+    "Pride festival",
+    "LGBTQ+ advocacy",
+    "events",
+    "support",
+    "Peoria"
+  ],
+  "notes": "Contact email: admin@peoriaproud.org."
+},
   {
     "id": "positive-health-solutions",
     "name": "Positive Health Solutions",
@@ -300,3 +302,4 @@
     "notes": "Event nights and hours may vary."
   }
 ]
+
