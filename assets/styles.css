@@ -201,24 +201,20 @@ h2{ margin: 0 0 10px; font-size: 20px; }
 .tag[data-owner]{
   background: linear-gradient(
     135deg,
-    rgba(225, 70, 110, 0.28),   /* coral-magenta */
-    rgba(120, 30, 60, 0.28)     /* deep wine */
+    rgba(225, 70, 110, 0.28),
+    rgba(120, 30, 60, 0.28)
   );
   border: 1px solid rgba(225, 70, 110, 0.6);
   color: #fff2f6;
   font-weight: 800;
+  font-size: 14.5px; /* slightly larger than normal tags */
   letter-spacing: 0.25px;
   box-shadow:
     0 0 0 1px rgba(225,70,110,.25),
     0 8px 22px rgba(0,0,0,.4);
 }
 
-.tag[data-owner]::before{
-  content: "●";
-  margin-right: 0.35em;
-  font-size: 0.6em;
-  opacity: 0.9;
-}
+
 
 .filters-row{
   display:grid;
@@ -309,3 +305,4 @@ input:focus, select:focus, textarea:focus{
 }
 .footer-links{ display:flex; gap: 12px; }
 .footer-links a{ color: var(--muted); }
+
