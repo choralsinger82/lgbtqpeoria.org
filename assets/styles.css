@@ -203,6 +203,19 @@ h2{ margin: 0 0 10px; font-size: 20px; }
   gap: 12px;
   align-items:end;
 }
+.tag {
+  background: #eef2f7;
+  border-radius: 999px;
+  padding: 0.2em 0.6em;
+  font-size: 0.75rem;
+}
+
+.tag[data-owner] {
+  background: #e8f5ee;
+  border: 1px solid #8ac7a1;
+  font-weight: 600;
+}
+
 @media (max-width: 820px){
   .filters-row{ grid-template-columns: 1fr; }
 }
@@ -283,3 +296,4 @@ input:focus, select:focus, textarea:focus{
 }
 .footer-links{ display:flex; gap: 12px; }
 .footer-links a{ color: var(--muted); }
+
