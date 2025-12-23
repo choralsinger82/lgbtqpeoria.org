@@ -94,11 +94,11 @@ code{ font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liber
 .brand-subtitle{ font-size: 13px; color: var(--muted2); margin-top: 1px; }
 
 .nav{
+  position: relative;
   display:flex;
-  flex-wrap: wrap;
-  gap: 8px;
   align-items:center;
   justify-content: flex-end;
+  gap: 8px;
 }
 .nav a{
   padding: 8px 10px;
@@ -110,6 +110,75 @@ code{ font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liber
   color: var(--text);
   border-color: var(--border);
   background: rgba(255,255,255,.06);
+}
+
+/* Desktop link row + mobile dropdown */
+.nav-links{
+  display:flex;
+  gap: 8px;
+  align-items:center;
+}
+
+/* Mobile toggle hidden on desktop */
+.nav-toggle{
+  display:none;
+  align-items:center;
+  gap: 8px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,.06);
+  color: var(--text);
+  padding: 8px 10px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+.nav-toggle:hover{
+  background: rgba(255,255,255,.10);
+}
+.nav-toggle:focus-visible{
+  outline: 2px solid rgba(255,255,255,.35);
+  outline-offset: 2px;
+}
+
+/* Dropdown panel */
+.nav-menu{
+  position:absolute;
+  right: 0;
+  top: calc(100% + 10px);
+  min-width: 210px;
+  background: rgba(11,15,26,.98);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 10px;
+  box-shadow: var(--shadow);
+  z-index: 1000;
+}
+.nav-menu a{
+  display:block;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid transparent; /* prevents layout shift on hover */
+  color: var(--muted);
+}
+.nav-menu a:hover,
+.nav-menu a:focus-visible{
+  text-decoration:none;
+  background: rgba(255,255,255,.08);
+}
+.nav-menu a[aria-current="page"]{
+  color: var(--text);
+  border-color: var(--border);
+  background: rgba(255,255,255,.06);
+}
+
+/* Switch to dropdown on smaller screens */
+@media (max-width: 720px){
+  .nav-links{ display:none; }
+  .nav-toggle{ display:inline-flex; }
+
+  /* Optional: make the header less massive on mobile (desktop unchanged) */
+  .brand-mark{ width: 44px; height: 44px; }
+  .brand-title{ font-size: 1.35rem; }
+  .header-inner{ padding: 10px 0; }
 }
 
 .hero{
@@ -223,8 +292,6 @@ h2{ margin: 0 0 10px; font-size: 20px; }
     0 8px 22px rgba(0,0,0,.4);
 }
 
-
-
 .filters-row{
   display:grid;
   grid-template-columns: 1.5fr 1fr 1fr;
@@ -314,11 +381,3 @@ input:focus, select:focus, textarea:focus{
 }
 .footer-links{ display:flex; gap: 12px; }
 .footer-links a{ color: var(--muted); }
-
-
-
-
-
-
-
-
