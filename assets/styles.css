@@ -306,7 +306,9 @@ h2{ margin: 0 0 10px; font-size: 20px; }
 .field{ display:flex; flex-direction: column; gap: 6px; }
 .field span{ font-size: 13px; color: var(--muted2); }
 
-input, select, textarea{
+input:not([type="checkbox"]):not([type="radio"]),
+select,
+textarea{
   width:100%;
   padding: 10px 12px;
   border-radius: 14px;
@@ -315,9 +317,23 @@ input, select, textarea{
   color: var(--text);
   outline: none;
 }
+
 input:focus, select:focus, textarea:focus{
   box-shadow: 0 0 0 3px rgba(125,211,252,.22);
   border-color: rgba(125,211,252,.55);
+}
+.checkbox{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+}
+
+.checkbox input[type="checkbox"]{
+  width: auto;
+  padding: 0;
+  border-radius: 4px;
+  background: transparent;
 }
 
 .filters-meta{
@@ -389,3 +405,4 @@ input:focus, select:focus, textarea:focus{
   gap: 8px;
   margin-left: auto;
 }
+
