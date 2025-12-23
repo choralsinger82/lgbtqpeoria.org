@@ -14,12 +14,12 @@
     <div class="container header-inner">
       <div class="brand">
         <div class="brand-mark">
-  <img
-    src="assets/flag.webp"
-    alt=""
-    aria-hidden="true"
-  />
-</div>
+          <img
+            src="assets/flag.webp"
+            alt=""
+            aria-hidden="true"
+          />
+        </div>
 
         <div class="brand-text">
           <div class="brand-title">LGBTQ Peoria</div>
@@ -28,10 +28,26 @@
       </div>
 
       <nav class="nav" aria-label="Primary">
-        <a href="index.html">Home</a>
-        <a href="directory.html">Rainbow Pages</a>
-        <a href="submit.html">Submit</a>
-        <a href="about.html" aria-current="page">About</a>
+        <!-- Desktop links -->
+        <div class="nav-links" role="list">
+          <a href="index.html">Home</a>
+          <a href="directory.html">Rainbow Pages</a>
+          <a href="submit.html">Submit</a>
+          <a href="about.html" aria-current="page">About</a>
+        </div>
+
+        <!-- Mobile menu button -->
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="navMenu">
+          Menu <span class="nav-toggle-icon" aria-hidden="true">☰</span>
+        </button>
+
+        <!-- Mobile dropdown -->
+        <div id="navMenu" class="nav-menu" hidden>
+          <a href="index.html">Home</a>
+          <a href="directory.html">Rainbow Pages</a>
+          <a href="submit.html">Submit</a>
+          <a href="about.html" aria-current="page">About</a>
+        </div>
       </nav>
     </div>
   </header>
@@ -62,7 +78,6 @@
         To request changes, report concerns, or ask questions, email:
         <a href="mailto:lgbtqpeoria@gmail.com">lgbtqpeoria@gmail.com</a>
       </p>
-      
     </section>
 
     <section class="card info">
@@ -85,7 +100,45 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    (function () {
+      const btn = document.querySelector(".nav-toggle");
+      const menu = document.getElementById("navMenu");
+      if (!btn || !menu) return;
+
+      function closeMenu() {
+        menu.hidden = true;
+        btn.setAttribute("aria-expanded", "false");
+      }
+
+      function openMenu() {
+        menu.hidden = false;
+        btn.setAttribute("aria-expanded", "true");
+      }
+
+      function toggleMenu() {
+        const isOpen = btn.getAttribute("aria-expanded") === "true";
+        if (isOpen) closeMenu();
+        else openMenu();
+      }
+
+      btn.addEventListener("click", toggleMenu);
+
+      document.addEventListener("click", (e) => {
+        if (!menu.hidden && !menu.contains(e.target) && !btn.contains(e.target)) {
+          closeMenu();
+        }
+      });
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeMenu();
+      });
+
+      menu.addEventListener("click", (e) => {
+        if (e.target.closest("a")) closeMenu();
+      });
+    })();
+  </script>
 </body>
 </html>
-
-
