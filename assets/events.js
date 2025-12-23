@@ -64,29 +64,30 @@
     return dt ? dt.getFullYear() : null;
   }
 
-  // Past check: compares end-of-day local time
   function isPastEvent(dateStr) {
     const dt = parseDateOnly(dateStr);
     if (!dt) return false;
-    // End of that day in local time:
     const endOfDay = new Date(dt.getFullYear(), dt.getMonth(), dt.getDate(), 23, 59, 59, 999);
     return endOfDay.getTime() < Date.now();
   }
 
   // --- Recurrence expansion ---
-  // Supported recurrence:
+  // Supported recurrence (your existing schema):
   // recurrence: {
   //   freq: "weekly" | "monthly_date" | "monthly_nth",
   //   interval: 1, // optional, default 1
   //   // weekly:
-  //   byweekday: ["MO","TU","WE","TH","FR","SA","SU"], // required for weekly
+  //   byweekday: ["MO","TU","WE","TH","FR","SA","SU"],
   //   // monthly_date:
-  //   bymonthday: 15, // day-of-month number
+  //   bymonthday: 15,
   //   // monthly_nth:
-  //   weekday: "TH",  // weekday code
-  //   nth: 3,         // 1-5 (5 = last-ish if month has it)
-  //   until: "YYYY-MM-DD" // optional end date
+  //   weekday: "TH",
+  //   nth: 3,
+  //   until: "YYYY-MM-DD"
   // }
+  //
+  // Anchor (recommended for correct interval behavior across months):
+  // - event.start_date: "YYYY-MM-DD" (first occurrence)
   const weekdayMap = { SU: 0, MO: 1, TU: 2, WE: 3, TH: 4, FR: 5, SA: 6 };
 
   function clampUntilDate(untilStr) {
@@ -99,30 +100,41 @@
   }
 
   function endOfMonth(year, month1to12) {
-    return new Date(year, month1to12, 0, 12, 0, 0, 0); // day 0 of next month
+    return new Date(year, month1to12, 0, 12, 0, 0, 0);
   }
 
   function nthWeekdayOfMonth(year, monthIndex0, weekday0, nth) {
-    // nth: 1..5
     const first = new Date(year, monthIndex0, 1, 12, 0, 0, 0);
     const firstDow = first.getDay();
     const offset = (weekday0 - firstDow + 7) % 7;
     const day = 1 + offset + (nth - 1) * 7;
     const dt = new Date(year, monthIndex0, day, 12, 0, 0, 0);
-    // Validate still in same month
     return dt.getMonth() === monthIndex0 ? dt : null;
   }
 
+  function monthsBetween(a, b) {
+    // a, b are Date at noon
+    return (b.getFullYear() - a.getFullYear()) * 12 + (b.getMonth() - a.getMonth());
+  }
+
+  function weeksBetween(a, b) {
+    // both noon, rough whole-week difference
+    const ms = b.getTime() - a.getTime();
+    return Math.floor(ms / (7 * 24 * 60 * 60 * 1000));
+  }
+
   function expandRecurringEvent(baseEvent, year, monthVal) {
-    // monthVal can be "all" or "1..12"
     const rec = baseEvent.recurrence;
     if (!rec || !rec.freq) return [];
 
     const interval = rec.interval && Number.isFinite(rec.interval) ? rec.interval : 1;
     const until = clampUntilDate(rec.until);
-    const occurrences = [];
 
-    // If month is "all", we generate only for the whole selected year (12 months)
+    // Anchor for interval correctness:
+    const anchorStr = baseEvent.start_date || baseEvent.date || "";
+    const anchor = parseDateOnly(anchorStr);
+
+    const occurrences = [];
     const monthsToGenerate = monthVal === "all"
       ? Array.from({ length: 12 }, (_, i) => i + 1)
       : [parseInt(monthVal, 10)];
@@ -130,24 +142,20 @@
     for (const m1 of monthsToGenerate) {
       const monthStart = startOfMonth(year, m1);
       const monthEnd = endOfMonth(year, m1);
-
-      // Apply until limit
       const effectiveEnd = until && until.getTime() < monthEnd.getTime() ? until : monthEnd;
 
       if (rec.freq === "weekly") {
         const by = Array.isArray(rec.byweekday) ? rec.byweekday : [];
         const weekdayNums = by.map(w => weekdayMap[w]).filter(v => typeof v === "number");
 
-        // Start from the first day of the month
         let cursor = new Date(monthStart);
-        // Walk day by day
         while (cursor.getTime() <= effectiveEnd.getTime()) {
           const dow = cursor.getDay();
           if (weekdayNums.includes(dow)) {
-            // interval support: count weeks from monthStart (rough + simple)
-            // If interval > 1, we only include weeks where weekIndex % interval === 0
-            const weekIndex = Math.floor((cursor.getTime() - monthStart.getTime()) / (7 * 24 * 60 * 60 * 1000));
-            if (weekIndex % interval === 0) {
+            // Interval anchored to anchor date (if provided), otherwise monthStart fallback
+            const anchorForWeeks = anchor || monthStart;
+            const w = weeksBetween(anchorForWeeks, cursor);
+            if (w >= 0 && (w % interval === 0)) {
               const iso = `${cursor.getFullYear()}-${String(cursor.getMonth() + 1).padStart(2, "0")}-${String(cursor.getDate()).padStart(2, "0")}`;
               occurrences.push(makeOccurrence(baseEvent, iso));
             }
@@ -160,13 +168,18 @@
         const day = parseInt(rec.bymonthday, 10);
         if (!Number.isFinite(day) || day < 1 || day > 31) continue;
 
-        // interval support: skip months not matching interval based on January index
-        const monthIndexInYear = m1 - 1;
-        if (monthIndexInYear % interval !== 0) continue;
-
         const dt = new Date(year, m1 - 1, day, 12, 0, 0, 0);
-        if (dt.getMonth() !== (m1 - 1)) continue; // invalid day for that month
+        if (dt.getMonth() !== (m1 - 1)) continue;
         if (until && dt.getTime() > until.getTime()) continue;
+
+        // Interval anchored to anchor date (if provided), otherwise January fallback
+        if (anchor) {
+          const diff = monthsBetween(anchor, dt);
+          if (diff < 0 || diff % interval !== 0) continue;
+        } else {
+          const monthIndexInYear = m1 - 1;
+          if (monthIndexInYear % interval !== 0) continue;
+        }
 
         const iso = `${year}-${String(m1).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
         occurrences.push(makeOccurrence(baseEvent, iso));
@@ -177,12 +190,18 @@
         const nth = parseInt(rec.nth, 10);
         if (typeof weekday0 !== "number" || !Number.isFinite(nth) || nth < 1 || nth > 5) continue;
 
-        const monthIndexInYear = m1 - 1;
-        if (monthIndexInYear % interval !== 0) continue;
-
         const dt = nthWeekdayOfMonth(year, m1 - 1, weekday0, nth);
         if (!dt) continue;
         if (until && dt.getTime() > until.getTime()) continue;
+
+        // Interval anchored to anchor date (if provided)
+        if (anchor) {
+          const diff = monthsBetween(anchor, dt);
+          if (diff < 0 || diff % interval !== 0) continue;
+        } else {
+          const monthIndexInYear = m1 - 1;
+          if (monthIndexInYear % interval !== 0) continue;
+        }
 
         const iso = `${dt.getFullYear()}-${String(dt.getMonth() + 1).padStart(2, "0")}-${String(dt.getDate()).padStart(2, "0")}`;
         occurrences.push(makeOccurrence(baseEvent, iso));
@@ -193,7 +212,6 @@
   }
 
   function makeOccurrence(baseEvent, dateISO) {
-    // Clone + override date; allow per-occurrence title tweaks later if needed
     return {
       ...baseEvent,
       date: dateISO,
@@ -202,13 +220,7 @@
   }
 
   // --- Calendar links ---
-  // Requires:
-  //  - date (YYYY-MM-DD)
-  //  - time_start (HH:MM, 24h) optional
-  //  - time_end (HH:MM, 24h) optional
-  // If time_start missing, we won’t show calendar links.
   function parseTimeHM(hm) {
-    // "HH:MM"
     if (!hm) return null;
     const m = /^(\d{1,2}):(\d{2})$/.exec(hm);
     if (!m) return null;
@@ -223,7 +235,6 @@
     const t = parseTimeHM(timeHM);
     if (!d || !t) return null;
     const local = new Date(d.getFullYear(), d.getMonth(), d.getDate(), t.h, t.mi, 0, 0);
-    // Convert to UTC format YYYYMMDDTHHMMSSZ
     const yyyy = local.getUTCFullYear();
     const mm = String(local.getUTCMonth() + 1).padStart(2, "0");
     const dd = String(local.getUTCDate()).padStart(2, "0");
@@ -240,7 +251,6 @@
     const startUTC = toICSDateTimeUTC(ev.date, ev.time_start);
     if (!startUTC) return "";
 
-    // If no end, default to +60 minutes
     let endUTC = "";
     if (ev.time_end) {
       endUTC = toICSDateTimeUTC(ev.date, ev.time_end);
@@ -260,8 +270,8 @@
     const params = new URLSearchParams({
       action: "TEMPLATE",
       text: title,
-      details: details,
-      location: location,
+      details,
+      location,
       dates: `${startUTC}/${endUTC}`
     });
 
@@ -281,7 +291,6 @@
     if (ev.time_end) {
       dtEnd = toICSDateTimeUTC(ev.date, ev.time_end);
     } else {
-      // default +60 min
       const d = parseDateOnly(ev.date);
       const t = parseTimeHM(ev.time_start);
       const local = new Date(d.getFullYear(), d.getMonth(), d.getDate(), t.h, t.mi, 0, 0);
@@ -325,14 +334,15 @@
     if (!ics) return null;
     const blob = new Blob([ics], { type: "text/calendar;charset=utf-8" });
     const url = URL.createObjectURL(blob);
-    return { url, filename: `event-${(ev.name || "event").toLowerCase().replace(/[^a-z0-9]+/g, "-")}-${ev.date}.ics` };
+    return {
+      url,
+      filename: `event-${(ev.name || "event").toLowerCase().replace(/[^a-z0-9]+/g, "-")}-${ev.date}.ics`
+    };
   }
 
   function matchesFilters(ev, q, monthVal, yearVal, showPast) {
-    // Hide past by default
     if (!showPast && ev.date && isPastEvent(ev.date)) return false;
 
-    // Month/year filters
     const m = getMonthFromDateStr(ev.date);
     const y = getYearFromDateStr(ev.date);
 
@@ -344,7 +354,6 @@
       if (!m || String(m) !== monthVal) return false;
     }
 
-    // Search
     if (!q) return true;
 
     const hay = normalize([
@@ -395,42 +404,37 @@
       const details = document.createElement("div");
       details.className = "listing-details";
 
-      // Date (separate)
       if (ev.date) {
         const p = document.createElement("p");
         p.innerHTML = `<strong>Date:</strong> ${escapeHtml(formatDate(ev.date))}`;
         details.appendChild(p);
       }
 
-      // Time (separate)
       if (ev.time) {
         const p = document.createElement("p");
         p.innerHTML = `<strong>Time:</strong> ${escapeHtml(ev.time)}`;
         details.appendChild(p);
       }
 
-      // Location (separate)
       if (ev.location) {
         const p = document.createElement("p");
         p.innerHTML = `<strong>Location:</strong> ${escapeHtml(ev.location)}`;
         details.appendChild(p);
       }
 
-      // Website
       if (ev.website) {
         const p = document.createElement("p");
         p.innerHTML = `<strong>Website:</strong> <a href="${escapeAttr(ev.website)}" target="_blank" rel="noopener noreferrer">${escapeHtml(ev.website)}</a>`;
         details.appendChild(p);
       }
 
-      // Tickets
       if (ev.tickets) {
         const p = document.createElement("p");
         p.innerHTML = `<strong>Tickets:</strong> <a href="${escapeAttr(ev.tickets)}" target="_blank" rel="noopener noreferrer">Purchase / Info</a>`;
         details.appendChild(p);
       }
 
-      // Add-to-calendar links (only if time_start exists)
+      // Calendar links
       if (ev.time_start) {
         const calRow = document.createElement("p");
         const gcal = buildGoogleCalendarUrl(ev);
@@ -446,7 +450,6 @@
         }
       }
 
-      // Description
       if (ev.description) {
         const desc = document.createElement("p");
         desc.className = "muted";
@@ -454,7 +457,6 @@
         details.appendChild(desc);
       }
 
-      // Tags
       if (ev.tags && ev.tags.length) {
         const tagWrap = document.createElement("div");
         tagWrap.className = "tag-row";
@@ -463,9 +465,7 @@
           const tag = document.createElement("span");
           tag.className = "tag";
           tag.textContent = t;
-
           if (t.endsWith("-owned")) tag.dataset.owner = "true";
-
           tagWrap.appendChild(tag);
         }
 
@@ -488,25 +488,70 @@
     return;
   }
 
-  // Expand recurrence into occurrences for the selected year/month
-  function buildExpandedList(yearVal, monthVal) {
-    const expanded = [];
+  // --- Auto-populate YEAR dropdown based on data ---
+  (function populateYearOptions() {
+    const nowY = new Date().getFullYear();
+    let minY = nowY;
+    let maxY = nowY;
 
     for (const ev of raw) {
-      // Base one-time event
+      const d = parseDateOnly(ev.date);
+      if (d) {
+        minY = Math.min(minY, d.getFullYear());
+        maxY = Math.max(maxY, d.getFullYear());
+      }
+
+      const anchor = parseDateOnly(ev.start_date || "");
+      if (anchor) {
+        minY = Math.min(minY, anchor.getFullYear());
+        maxY = Math.max(maxY, anchor.getFullYear());
+      }
+
+      const until = clampUntilDate(ev.recurrence && ev.recurrence.until);
+      if (until) {
+        minY = Math.min(minY, until.getFullYear());
+        maxY = Math.max(maxY, until.getFullYear());
+      }
+    }
+
+    // Keep within a sane band (prevents weird typos from exploding the dropdown)
+    minY = Math.max(minY, nowY - 1);
+    maxY = Math.min(maxY, nowY + 5);
+
+    const existingAll = [...yearEl.options].some(o => o.value === "all");
+    yearEl.innerHTML = "";
+    if (!existingAll) {
+      const opt = document.createElement("option");
+      opt.value = "all";
+      opt.textContent = "All";
+      yearEl.appendChild(opt);
+    } else {
+      const opt = document.createElement("option");
+      opt.value = "all";
+      opt.textContent = "All";
+      yearEl.appendChild(opt);
+    }
+
+    for (let y = minY; y <= maxY; y++) {
+      const opt = document.createElement("option");
+      opt.value = String(y);
+      opt.textContent = String(y);
+      yearEl.appendChild(opt);
+    }
+  })();
+
+  function buildExpandedList(yearVal, monthVal) {
+    const expanded = [];
+    const yearToUse = yearVal === "all" ? String(new Date().getFullYear()) : yearVal;
+    const y = parseInt(yearToUse, 10);
+
+    for (const ev of raw) {
       if (ev.date) expanded.push(ev);
-
-      // Expand recurring events ONLY when a year is selected
-      // If year is "all", we’ll still expand for the current year to avoid dumping huge lists.
-      const yearToUse = yearVal === "all" ? String(new Date().getFullYear()) : yearVal;
-      const y = parseInt(yearToUse, 10);
-
       if (ev.recurrence && y) {
         expanded.push(...expandRecurringEvent(ev, y, monthVal));
       }
     }
 
-    // Sort by date (soonest first)
     expanded.sort((a, b) => {
       const da = parseDateOnly(a.date);
       const db = parseDateOnly(b.date);
@@ -522,7 +567,7 @@
   // Default month/year to current if options exist
   (function setDefaultMonthYear() {
     const now = new Date();
-    const currentMonth = String(now.getMonth() + 1); // 1-12
+    const currentMonth = String(now.getMonth() + 1);
     const currentYear = String(now.getFullYear());
 
     if ([...monthEl.options].some(o => o.value === currentMonth)) monthEl.value = currentMonth;
@@ -534,13 +579,13 @@
 
   function update() {
     const q = normalize(qEl.value);
-    const monthVal = monthEl.value; // "all" or "1".."12"
-    const yearVal = yearEl.value;   // "all" or "2025" etc
+    const monthVal = monthEl.value;
+    const yearVal = yearEl.value;
     const showPast = showPastEl ? !!showPastEl.checked : false;
 
     const all = buildExpandedList(yearVal, monthVal);
-
     const filtered = all.filter(ev => matchesFilters(ev, q, monthVal, yearVal, showPast));
+
     countEl.textContent = `${filtered.length} event${filtered.length === 1 ? "" : "s"} shown`;
     render(filtered);
   }
