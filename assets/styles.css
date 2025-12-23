@@ -85,7 +85,12 @@ code{ font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liber
   object-fit: contain;
   display: block;
 }
-.brand-title{ font-weight: 800; letter-spacing: .2px; }
+.brand-title{
+  font-size: 1.125rem; /* ~18px */
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  line-height: 1.1;
+}
 .brand-subtitle{ font-size: 13px; color: var(--muted2); margin-top: 1px; }
 
 .nav{
@@ -309,6 +314,7 @@ input:focus, select:focus, textarea:focus{
 }
 .footer-links{ display:flex; gap: 12px; }
 .footer-links a{ color: var(--muted); }
+
 
 
 
