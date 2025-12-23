@@ -323,9 +323,10 @@ input:focus, select:focus, textarea:focus{
 .filters-meta{
   display:flex;
   align-items:center;
-  justify-content: space-between;
+  justify-content: flex-start; /* change this */
   gap: 10px;
   margin-top: 12px;
+  flex-wrap: wrap;            /* optional but helps on smaller widths */
 }
 
 .listing-top{
@@ -381,3 +382,10 @@ input:focus, select:focus, textarea:focus{
 }
 .footer-links{ display:flex; gap: 12px; }
 .footer-links a{ color: var(--muted); }
+
+.checkbox{
+  display:inline-flex;
+  align-items:center;
+  gap: 8px;
+  margin-left: auto;
+}
