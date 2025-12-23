@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Peoria Pride Festival",
+    "date": "2025-06-29",
+    "time": "11:00 AM – 5:00 PM",
+    "location": "Downtown Peoria Riverfront",
+    "website": "https://peoriapride.org",
+    "tickets": "",
+    "description": "An all-ages Pride celebration featuring live music, local vendors, community organizations, and affirming spaces for the entire LGBTQIA+ community.",
+    "tags": ["pride", "all-ages", "community"]
+  },
+  {
+    "name": "Drag Bingo Night",
+    "date": "2025-07-12",
+    "time": "7:00 PM",
+    "location": "The X Bar, Peoria",
+    "website": "https://www.facebook.com/thexbarpeoria",
+    "tickets": "https://www.eventbrite.com/example-drag-bingo",
+    "description": "A high-energy drag bingo night with performances, prizes, and plenty of sass. 19+ event.",
+    "tags": ["drag", "nightlife", "fundraiser", "19+"]
+  },
+  {
+    "name": "Trans & Nonbinary Support Group",
+    "date": "2025-07-18",
+    "time": "6:30 PM – 8:00 PM",
+    "location": "Central Illinois Friends Meeting House",
+    "website": "",
+    "tickets": "",
+    "description": "A confidential, peer-led support group for trans, nonbinary, and gender-questioning individuals. Free to attend.",
+    "tags": ["support-group", "trans", "nonbinary", "free"]
+  },
+  {
+    "name": "Queer Artist Showcase",
+    "date": "2025-08-09",
+    "time": "8:00 PM",
+    "location": "Contemporary Art Center of Peoria",
+    "website": "https://artcenterpeoria.org",
+    "tickets": "https://www.eventbrite.com/example-artist-showcase",
+    "description": "An evening showcasing queer visual artists, musicians, and spoken-word performers from Central Illinois.",
+    "tags": ["arts", "music", "spoken-word", "18+"]
+  },
+  {
+    "name": "LGBTQ+ Health & Wellness Fair",
+    "date": "2025-09-14",
+    "time": "10:00 AM – 2:00 PM",
+    "location": "Peoria Civic Center",
+    "website": "",
+    "tickets": "",
+    "description": "A free wellness fair featuring affirming healthcare providers, mental health resources, HIV/STI testing, and community support organizations.",
+    "tags": ["health", "wellness", "free", "community"]
+  }
+]
