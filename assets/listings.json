@@ -392,6 +392,28 @@
     "notes": "Use the Federation website contact page for the most current phone/email and office hours."
   },
   {
+  "id": "jolt-foundation",
+  "name": "Jolt Foundation",
+  "category": "support",
+  "area": "peoria",
+  "short": "Established by Blake and Tamara Olt after the death of their son, Joshua Olt, from an accidental heroin overdose.",
+  "description": "JOLT Foundation provides harm reduction & peer recovery services that address the negative health outcomes that are the result of harmful criminal justice and public health policies.",
+  "address": "2203 N. Sheridan Rd. Peoria, IL 61604",
+  "website": "https://joltfoundation.com/",
+  "tags": [
+    "harm reduction",
+    "support groups",
+    "drug checking",
+    "recovery navigation",
+    "overdose prevention",
+    "sex worker outreach",
+    "street outreach",
+    "Peoria"
+  ],
+  "notes": "Phone: (309) 966-3643. Email: joltharmreduction@gmail.com. Facebook: https://www.facebook.com/joltfoundation. Instagram: https://www.instagram.com/joltharmredux"  
+},
+  
+  {
   "id": "josh-johnston-photography",
   "name": "Josh Johnston Photography",
   "category": "businesses",
@@ -649,6 +671,7 @@
     "notes": "Use the church website contact page for the most current phone/email and service times."
   }
 ]
+
 
 
 
