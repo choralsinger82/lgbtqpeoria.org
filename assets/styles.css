@@ -322,18 +322,18 @@ input:focus, select:focus, textarea:focus{
   box-shadow: 0 0 0 3px rgba(125,211,252,.22);
   border-color: rgba(125,211,252,.55);
 }
+
+/* Fix checkbox spacing */
 .checkbox{
   display: inline-flex;
   align-items: center;
   gap: 8px;
   margin-left: auto;
 }
-
 .checkbox input[type="checkbox"]{
   width: auto;
+  margin: 0;
   padding: 0;
-  border-radius: 4px;
-  background: transparent;
 }
 
 .filters-meta{
@@ -398,11 +398,3 @@ input:focus, select:focus, textarea:focus{
 }
 .footer-links{ display:flex; gap: 12px; }
 .footer-links a{ color: var(--muted); }
-
-.checkbox{
-  display:inline-flex;
-  align-items:center;
-  gap: 8px;
-  margin-left: auto;
-}
-
