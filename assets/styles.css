@@ -323,6 +323,23 @@ input:focus, select:focus, textarea:focus{
   border-color: rgba(125,211,252,.55);
 }
 
+/* Filters footer row (count + submit on left, checkbox on right) */
+.filters-meta{
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+.filters-left{
+  display:flex;
+  align-items:center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
 /* Fix checkbox spacing */
 .checkbox{
   display: inline-flex;
@@ -334,15 +351,6 @@ input:focus, select:focus, textarea:focus{
   width: auto;
   margin: 0;
   padding: 0;
-}
-
-.filters-meta{
-  display:flex;
-  align-items:center;
-  justify-content: flex-start; /* change this */
-  gap: 10px;
-  margin-top: 12px;
-  flex-wrap: wrap;            /* optional but helps on smaller widths */
 }
 
 .listing-top{
