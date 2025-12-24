@@ -35,7 +35,6 @@
     ],
     "notes": "Age policy is 19+. Check event listings for DJs and theme nights."
   },
-  
   {
     "id": "the-bistro-bloomington",
     "name": "The Bistro (The B)",
@@ -62,7 +61,6 @@
     "description": "The Bridge United Methodist Church is a Washington, IL congregation offering worship services, small groups, and community engagement. It’s listed by Peoria Proud as an affirming faith community.",
     "address": "113 S Main St, Washington, IL 61571",
     "website": "https://www.thebridgeumc.org/",
-    "features": [],
     "tags": [
       "affirming",
       "church",
@@ -81,14 +79,6 @@
     "description": "Central Illinois Friends supports the LGBTQI+ community, people living with HIV, and the general public through compassionate, personalized care. Services include sexual health education, HIV/STI testing, PrEP/PEP, safer sex kits, support for people living with HIV, trans health navigation, and a free counseling program for LGBTQ+ folks and their families.",
     "address": "2112 E War Memorial Dr, Peoria, IL 61614",
     "website": "https://centralillinoisfriends.org/",
-    "features": [
-      "hiv-sti",
-      "prep-pep",
-      "prevention",
-      "community-center",
-      "counseling",
-      "trans-navigation"
-    ],
     "tags": [
       "community center",
       "counseling",
@@ -143,7 +133,6 @@
     "description": "Community United Church of Christ is a UCC congregation in Morton offering worship services, pastoral care, and community involvement. It’s listed by Peoria Proud as an affirming faith community.",
     "address": "1575 W Jefferson St, Morton, IL 61550",
     "website": "https://www.mortoncucc.org/",
-    "features": [],
     "tags": [
       "affirming",
       "church",
@@ -163,7 +152,6 @@
     "description": "Congregation Anshai Emeth is a Reform Jewish synagogue serving the Peoria area with Shabbat worship, lifecycle events, education, and community programming. It’s listed by Peoria Proud as an affirming faith community.",
     "address": "5614 N University St, Peoria, IL 61614",
     "website": "https://www.anshaiemeth.org/",
-    "features": [],
     "tags": [
       "affirming",
       "community",
@@ -172,27 +160,27 @@
       "synagogue",
       "worship"
     ],
-    "notes": "Use the synagogue website contact page for the most current phone/email and service times."
+    "notes": "Use the synagogue website contact page for the most current phone/email and office hours."
   },
   {
-  "id": "courtyard-by-marriott-peoria-downtown",
-  "name": "Courtyard by Marriott Peoria Downtown",
-  "category": "hotels",
-  "area": "peoria",
-  "short": "Modern downtown Peoria hotel with comfortable rooms, indoor pool, fitness center, and convenient location near the riverfront and Civic Center.",
-  "description": "Courtyard by Marriott Peoria Downtown offers modern accommodations in the heart of Peoria’s business and entertainment district, walking distance to the Peoria Riverfront, Civic Center, restaurants, and nightlife. The hotel features amenities like an indoor pool, fitness center, complimentary Wi-Fi, meeting space, and an on-site Bistro restaurant serving breakfast and evening drinks.",
-  "address": "533 Main St, Peoria, IL 61602",
-  "website": "https://www.marriott.com/en-us/hotels/piadt-courtyard-peoria-downtown/overview/",
-  "tags": [
-    "hotel",
-    "downtown",
-    "indoor pool",
-    "fitness center",
-    "restaurant",
-    "Peoria"
-  ],
-  "notes": "Front desk phone: (309) 671-5050. Connected via skywalk to the Peoria Civic Center and near many downtown attractions. :contentReference[oaicite:0]{index=0}"
-},
+    "id": "courtyard-by-marriott-peoria-downtown",
+    "name": "Courtyard by Marriott Peoria Downtown",
+    "category": "businesses",
+    "area": "peoria",
+    "short": "Modern downtown Peoria hotel with comfortable rooms, indoor pool, fitness center, and convenient location near the riverfront and Civic Center.",
+    "description": "Courtyard by Marriott Peoria Downtown offers modern accommodations in the heart of Peoria’s business and entertainment district, walking distance to the Peoria Riverfront, Civic Center, restaurants, and nightlife. The hotel features amenities like an indoor pool, fitness center, complimentary Wi-Fi, meeting space, and an on-site Bistro restaurant serving breakfast and evening drinks.",
+    "address": "533 Main St, Peoria, IL 61602",
+    "website": "https://www.marriott.com/en-us/hotels/piadt-courtyard-peoria-downtown/overview/",
+    "tags": [
+      "hotel",
+      "downtown",
+      "indoor pool",
+      "fitness center",
+      "restaurant",
+      "Peoria"
+    ],
+    "notes": "Front desk phone: (309) 671-5050. Connected via skywalk to the Peoria Civic Center and near many downtown attractions."
+  },
   {
     "id": "enough-stuff-club",
     "name": "Enough Stuff",
@@ -260,12 +248,6 @@
     "description": "FemmeCare Health & Wellness Center provides primary and gyne care with LGBTQ+ specific services.",
     "address": "901 S. Detroit Court #5258 Morton, IL 61550",
     "website": "https://femmecarehealth.com/",
-    "features": [
-      "gender-affirming",
-      "prep-pep",
-      "sexual-health",
-      "healthcare"
-    ],
     "tags": [
       "queer-owned",
       "Central Illinois",
@@ -286,7 +268,6 @@
     "description": "First Baptist Church of Peoria is a longtime Peoria congregation offering worship, faith formation, and community ministries. It’s listed by Peoria Proud as an affirming faith community.",
     "address": "411 W Lake Ave, Peoria, IL 61614",
     "website": "https://fbcpeoria.org/",
-    "features": [],
     "tags": [
       "affirming",
       "baptist",
@@ -305,7 +286,6 @@
     "description": "First Christian Church (Disciples of Christ) in Peoria is a Christian congregation offering worship, community connection, and service opportunities. It’s listed by Peoria Proud as an affirming faith community.",
     "address": "6400 N University St, Peoria, IL 61614",
     "website": "https://fccpeoria.org/",
-    "features": [],
     "tags": [
       "affirming",
       "church",
@@ -324,7 +304,6 @@
     "description": "First Congregational UCC is a Canton-based United Church of Christ congregation offering worship, pastoral care, and community engagement. It’s listed by Peoria Proud as an affirming faith community.",
     "address": "725 N Main St, Canton, IL 61520",
     "website": "https://canton-ucc.org/",
-    "features": [],
     "tags": [
       "affirming",
       "church",
@@ -344,7 +323,6 @@
     "description": "Glen Oak Christian Church is a Peoria congregation offering worship services and community connection. It’s listed by Peoria Proud as an affirming faith community.",
     "address": "1115 E Republic St, Peoria, IL 61603",
     "website": "https://www.glenoakchurch.org/",
-    "features": [],
     "tags": [
       "affirming",
       "church",
@@ -354,25 +332,25 @@
     "notes": "Phone: (309) 688-3464 • Email: glenoakchristian@sbcglobal.net"
   },
   {
-  "id": "hotshot-hvac",
-  "name": "Hotshot HVAC",
-  "category": "businesses",
-  "area": "peoria",
-  "short": "Trans-owned HVAC service providing residential heating and cooling repair, maintenance, and troubleshooting in Central Illinois.",
-  "description": "Hotshot HVAC is a Central Illinois HVAC service focused on helping homeowners stay comfortable year-round. Services include troubleshooting, repairs, and ongoing maintenance for heating and cooling systems, with an emphasis on clear communication and dependable service.",
-  "address": "610 W Patton Ct, Peoria, IL 61614",
-  "website": "https://www.hotshothvac.com/",
-  "tags": [
-    "trans-owned",
-    "air conditioning",
-    "heating",
-    "HVAC",
-    "maintenance",
-    "repair",
-    "residential"
-  ],
-  "notes": "Call or text: (309) 264-1097 • Email: hotshot.hvac@gmail.com"
-},
+    "id": "hotshot-hvac",
+    "name": "Hotshot HVAC",
+    "category": "businesses",
+    "area": "peoria",
+    "short": "Trans-owned HVAC service providing residential heating and cooling repair, maintenance, and troubleshooting in Central Illinois.",
+    "description": "Hotshot HVAC is a Central Illinois HVAC service focused on helping homeowners stay comfortable year-round. Services include troubleshooting, repairs, and ongoing maintenance for heating and cooling systems, with an emphasis on clear communication and dependable service.",
+    "address": "610 W Patton Ct, Peoria, IL 61614",
+    "website": "https://www.hotshothvac.com/",
+    "tags": [
+      "trans-owned",
+      "air conditioning",
+      "heating",
+      "HVAC",
+      "maintenance",
+      "repair",
+      "residential"
+    ],
+    "notes": "Call or text: (309) 264-1097 • Email: hotshot.hvac@gmail.com"
+  },
   {
     "id": "imago-dei-church-peoria",
     "name": "Imago Dei Church",
@@ -382,7 +360,6 @@
     "description": "Imago Dei Church is a Christian congregation in Peoria offering worship services, spiritual formation, and community connection. It’s listed by Peoria Proud as an affirming faith community.",
     "address": "7620 N University St, Peoria, IL 61614",
     "website": "https://www.imagodeichurch.org/",
-    "features": [],
     "tags": [
       "affirming",
       "church",
@@ -400,7 +377,6 @@
     "description": "The Jewish Federation of Peoria supports Jewish life in the region through community programs, connection, and services. It’s listed by Peoria Proud as an affirming faith community resource.",
     "address": "429 W Lake Ave, Peoria, IL 61614",
     "website": "https://www.jewishpeoria.org/",
-    "features": [],
     "tags": [
       "affirming",
       "community",
@@ -411,48 +387,47 @@
     "notes": "Use the Federation website contact page for the most current phone/email and office hours."
   },
   {
-  "id": "jolt-foundation",
-  "name": "Jolt Foundation",
-  "category": "support",
-  "area": "peoria",
-  "short": "Established by Blake and Tamara Olt after the death of their son, Joshua Olt, from an accidental heroin overdose.",
-  "description": "JOLT Foundation provides harm reduction & peer recovery services that address the negative health outcomes that are the result of harmful criminal justice and public health policies.",
-  "address": "2203 N. Sheridan Rd. Peoria, IL 61604",
-  "website": "https://joltfoundation.com/",
-  "tags": [
-    "harm reduction",
-    "support groups",
-    "drug checking",
-    "recovery navigation",
-    "overdose prevention",
-    "sex worker outreach",
-    "street outreach",
-    "Peoria"
-  ],
-  "notes": "Phone: (309) 966-3643. Email: joltharmreduction@gmail.com. Facebook: https://www.facebook.com/joltfoundation. Instagram: https://www.instagram.com/joltharmredux"  
-},
-  
+    "id": "jolt-foundation",
+    "name": "Jolt Foundation",
+    "category": "support",
+    "area": "peoria",
+    "short": "Established by Blake and Tamara Olt after the death of their son, Joshua Olt, from an accidental heroin overdose.",
+    "description": "JOLT Foundation provides harm reduction & peer recovery services that address the negative health outcomes that are the result of harmful criminal justice and public health policies.",
+    "address": "2203 N. Sheridan Rd. Peoria, IL 61604",
+    "website": "https://joltfoundation.com/",
+    "tags": [
+      "harm reduction",
+      "support groups",
+      "drug checking",
+      "recovery navigation",
+      "overdose prevention",
+      "sex worker outreach",
+      "street outreach",
+      "Peoria"
+    ],
+    "notes": "Phone: (309) 966-3643. Email: joltharmreduction@gmail.com. Facebook: https://www.facebook.com/joltfoundation. Instagram: https://www.instagram.com/joltharmredux"
+  },
   {
-  "id": "josh-johnston-photography",
-  "name": "Josh Johnston Photography",
-  "category": "businesses",
-  "area": "peoria",
-  "short": "Experienced Peoria photographer specializing in weddings, portraits, headshots, and creative sessions.",
-  "description": "Josh Johnston Photography is a Peoria-area photographer offering a wide range of services including wedding photography, engagement and couples sessions, family and children portraits, senior portraits, headshots, personal branding, and creative ‘You-Phoric’ portrait sessions. Josh brings a documentary and fine-art-inspired approach to capturing moments and creates images that reflect each client’s personality and story. Enthusiastically affirming and serving Peoria and Central Illinois.",
-  "address": "2206 W Ayres Ave, West Peoria, IL 61604",
-  "website": "https://joshjohnstonphoto.com/",
-  "tags": [
-    "queer-owned",
-    "photography",
-    "portraits",
-    "weddings",
-    "headshots",
-    "family",
-    "creative sessions",
-    "Peoria"
-  ],
-  "notes": "Phone: (309) 686-2189. Contact via website for booking, portfolio examples, and session details."  
-},
+    "id": "josh-johnston-photography",
+    "name": "Josh Johnston Photography",
+    "category": "businesses",
+    "area": "peoria",
+    "short": "Experienced Peoria photographer specializing in weddings, portraits, headshots, and creative sessions.",
+    "description": "Josh Johnston Photography is a Peoria-area photographer offering a wide range of services including wedding photography, engagement and couples sessions, family and children portraits, senior portraits, headshots, personal branding, and creative ‘You-Phoric’ portrait sessions. Josh brings a documentary and fine-art-inspired approach to capturing moments and creates images that reflect each client’s personality and story. Enthusiastically affirming and serving Peoria and Central Illinois.",
+    "address": "2206 W Ayres Ave, West Peoria, IL 61604",
+    "website": "https://joshjohnstonphoto.com/",
+    "tags": [
+      "queer-owned",
+      "photography",
+      "portraits",
+      "weddings",
+      "headshots",
+      "family",
+      "creative sessions",
+      "Peoria"
+    ],
+    "notes": "Phone: (309) 686-2189. Contact via website for booking, portfolio examples, and session details."
+  },
   {
     "id": "kickback-on-fulton",
     "name": "Kickback on Fulton",
@@ -492,45 +467,45 @@
     "notes": "Owned and operated by Jess (she/they). Typically open Tue–Sat 12pm–6pm."
   },
   {
-  "id": "olivers-in-the-heights",
-  "name": "Oliver's in the Heights",
-  "category": "nightlife",
-  "area": "central-il",
-  "short": "Peoria Heights bar and restaurant with pizza, cocktails, live music, and popular weekend vibes.",
-  "description": "Oliver's in the Heights is a Peoria Heights spot known for pizza, burgers, cocktails, and a lively bar atmosphere. They host events and draw a social crowd, with Sunday brunch and rotating specials.",
-  "address": "1231 E Samuel Ave, Peoria Heights, IL 61616",
-  "website": "https://www.oliversintheheights.com/",
-  "tags": [
-    "bar",
-    "brunch",
-    "cocktails",
-    "live music",
-    "Peoria Heights",
-    "pizza",
-    "restaurant"
-  ],
-  "notes": "Phone: (309) 681-1779 • Email: kryssi@oliversintheheights.com"
-},
+    "id": "olivers-in-the-heights",
+    "name": "Oliver's in the Heights",
+    "category": "nightlife",
+    "area": "central-il",
+    "short": "Peoria Heights bar and restaurant with pizza, cocktails, live music, and popular weekend vibes.",
+    "description": "Oliver's in the Heights is a Peoria Heights spot known for pizza, burgers, cocktails, and a lively bar atmosphere. They host events and draw a social crowd, with Sunday brunch and rotating specials.",
+    "address": "1231 E Samuel Ave, Peoria Heights, IL 61616",
+    "website": "https://www.oliversintheheights.com/",
+    "tags": [
+      "bar",
+      "brunch",
+      "cocktails",
+      "live music",
+      "Peoria Heights",
+      "pizza",
+      "restaurant"
+    ],
+    "notes": "Phone: (309) 681-1779 • Email: kryssi@oliversintheheights.com"
+  },
   {
-  "id": "peoria-marriott-pere-marquette",
-  "name": "Peoria Marriott Pere Marquette",
-  "category": "hotels",
-  "area": "peoria",
-  "short": "Historic downtown Peoria hotel blending classic style with modern amenities and proximity to the Civic Center and riverfront attractions.",
-  "description": "Peoria Marriott Pere Marquette is a landmark hotel in downtown Peoria offering upscale accommodations with modern amenities, an indoor pool, fitness center, on-site dining, and convenient access to the Peoria Civic Center, Riverfront Museum, and other local attractions. The hotel combines historic charm with contemporary comfort for both leisure and business stays.",
-  "address": "501 Main St, Peoria, IL 61602",
-  "website": "https://www.marriott.com/en-us/hotels/piamc-peoria-marriott-pere-marquette/overview/",
-  "tags": [
-    "hotel",
-    "downtown",
-    "historic",
-    "indoor pool",
-    "restaurant",
-    "event space",
-    "Peoria"
-  ],
-  "notes": "Front desk phone: (309) 637-6500. Features meeting/event spaces and is connected via skywalk to the Peoria Civic Center. :contentReference[oaicite:1]{index=1}"
-},
+    "id": "peoria-marriott-pere-marquette",
+    "name": "Peoria Marriott Pere Marquette",
+    "category": "businesses",
+    "area": "peoria",
+    "short": "Historic downtown Peoria hotel blending classic style with modern amenities and proximity to the Civic Center and riverfront attractions.",
+    "description": "Peoria Marriott Pere Marquette is a landmark hotel in downtown Peoria offering upscale accommodations with modern amenities, an indoor pool, fitness center, on-site dining, and convenient access to the Peoria Civic Center, Riverfront Museum, and other local attractions. The hotel combines historic charm with contemporary comfort for both leisure and business stays.",
+    "address": "501 Main St, Peoria, IL 61602",
+    "website": "https://www.marriott.com/en-us/hotels/piamc-peoria-marriott-pere-marquette/overview/",
+    "tags": [
+      "hotel",
+      "downtown",
+      "historic",
+      "indoor pool",
+      "restaurant",
+      "event space",
+      "Peoria"
+    ],
+    "notes": "Front desk phone: (309) 637-6500. Features meeting/event spaces and is connected via skywalk to the Peoria Civic Center."
+  },
   {
     "id": "peoria-proud",
     "name": "Peoria Proud",
@@ -552,24 +527,24 @@
     "notes": "Contact email: admin@peoriaproud.org."
   },
   {
-  "id": "pflag-peoria",
-  "name": "PFLAG Peoria",
-  "category": "support",
-  "area": "peoria",
-  "short": "Local chapter of PFLAG offering support, education, and advocacy for LGBTQ+ people, families, and allies in the Peoria area.",
-  "description": "PFLAG Peoria is a local chapter of the national PFLAG organization dedicated to providing support, education, and advocacy for LGBTQ+ individuals, their families, and allies. They host monthly support meetings, youth programming such as the Q Collective, and collaborate with community partners to promote acceptance, understanding, and inclusion throughout Greater Peoria.",
-  "address": "Peoria, IL",
-  "website": "https://pflagpeoria.org/",
-  "tags": [
-    "LGBTQ+ support",
-    "family support",
-    "advocacy",
-    "community",
-    "education",
-    "Peoria"
-  ],
-  "notes": "PFLAG Peoria meets monthly and partners with local organizations for meeting space. Reach out to PFLAG Peoria directly for the current meeting location, date, and time."
-},
+    "id": "pflag-peoria",
+    "name": "PFLAG Peoria",
+    "category": "support",
+    "area": "peoria",
+    "short": "Local chapter of PFLAG offering support, education, and advocacy for LGBTQ+ people, families, and allies in the Peoria area.",
+    "description": "PFLAG Peoria is a local chapter of the national PFLAG organization dedicated to providing support, education, and advocacy for LGBTQ+ individuals, their families, and allies. They host monthly support meetings, youth programming such as the Q Collective, and collaborate with community partners to promote acceptance, understanding, and inclusion throughout Greater Peoria.",
+    "address": "Peoria, IL",
+    "website": "https://pflagpeoria.org/",
+    "tags": [
+      "LGBTQ+ support",
+      "family support",
+      "advocacy",
+      "community",
+      "education",
+      "Peoria"
+    ],
+    "notes": "PFLAG Peoria meets monthly and partners with local organizations for meeting space. Reach out to PFLAG Peoria directly for the current meeting location, date, and time."
+  },
   {
     "id": "positive-health-solutions",
     "name": "Positive Health Solutions",
@@ -579,13 +554,6 @@
     "description": "Positive Health Solutions provides comprehensive HIV/STI testing, PrEP services, and gender-affirming intake.",
     "address": "222 NE Monroe St, Suites 901 & 904, Peoria, IL 61602",
     "website": "https://peoria.medicine.uic.edu/about/patient-care/positive-health-solutions/",
-    "features": [
-      "gender-affirming",
-      "hiv-sti",
-      "prep-pep",
-      "prevention",
-      "case-management"
-    ],
     "tags": [
       "case management",
       "healthcare",
@@ -661,7 +629,6 @@
     "description": "St. Paul’s Episcopal Church is an Episcopal congregation in Peoria offering worship services, pastoral care, and community life. It’s listed by Peoria Proud as an affirming faith community.",
     "address": "4714 N University St, Peoria, IL 61614",
     "website": "https://www.stpaulspeoria.org/",
-    "features": [],
     "tags": [
       "affirming",
       "church",
@@ -689,7 +656,7 @@
     ],
     "notes": "Live music typically Thursdays and open mic Sundays. Hours and events may vary—check social media or call ahead."
   },
-    {
+  {
     "id": "united-presbyterian-church-peoria",
     "name": "United Presbyterian Church of Peoria",
     "category": "faith",
@@ -698,7 +665,6 @@
     "description": "United Presbyterian Church of Peoria is a PC(USA) congregation offering worship services, ministries, and community engagement. It’s listed by Peoria Proud as an affirming faith community.",
     "address": "2400 W Northmoor Rd, Peoria, IL 61614",
     "website": "https://www.unitedpc.org/",
-    "features": [],
     "tags": [
       "affirming",
       "church",
@@ -718,7 +684,6 @@
     "description": "Universalist Unitarian Church of Peoria is a UU congregation offering services and community programs centered on spiritual exploration, inclusion, and social justice. It’s listed by Peoria Proud as an affirming faith community.",
     "address": "3000 W Richwoods Blvd, Peoria, IL 61604",
     "website": "https://peoriauuchurch.org/",
-    "features": [],
     "tags": [
       "affirming",
       "community",
@@ -729,9 +694,3 @@
     "notes": "Use the church website contact page for the most current phone/email and service times."
   }
 ]
-
-
-
-
-
-
