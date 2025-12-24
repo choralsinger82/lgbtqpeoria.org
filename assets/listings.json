@@ -175,6 +175,25 @@
     "notes": "Use the synagogue website contact page for the most current phone/email and service times."
   },
   {
+  "id": "courtyard-by-marriott-peoria-downtown",
+  "name": "Courtyard by Marriott Peoria Downtown",
+  "category": "hotels",
+  "area": "peoria",
+  "short": "Modern downtown Peoria hotel with comfortable rooms, indoor pool, fitness center, and convenient location near the riverfront and Civic Center.",
+  "description": "Courtyard by Marriott Peoria Downtown offers modern accommodations in the heart of Peoria’s business and entertainment district, walking distance to the Peoria Riverfront, Civic Center, restaurants, and nightlife. The hotel features amenities like an indoor pool, fitness center, complimentary Wi-Fi, meeting space, and an on-site Bistro restaurant serving breakfast and evening drinks.",
+  "address": "533 Main St, Peoria, IL 61602",
+  "website": "https://www.marriott.com/en-us/hotels/piadt-courtyard-peoria-downtown/overview/",
+  "tags": [
+    "hotel",
+    "downtown",
+    "indoor pool",
+    "fitness center",
+    "restaurant",
+    "Peoria"
+  ],
+  "notes": "Front desk phone: (309) 671-5050. Connected via skywalk to the Peoria Civic Center and near many downtown attractions. :contentReference[oaicite:0]{index=0}"
+},
+  {
     "id": "enough-stuff-club",
     "name": "Enough Stuff",
     "category": "community",
@@ -493,6 +512,26 @@
   "notes": "Phone: (309) 681-1779 • Email: kryssi@oliversintheheights.com"
 },
   {
+  "id": "peoria-marriott-pere-marquette",
+  "name": "Peoria Marriott Pere Marquette",
+  "category": "hotels",
+  "area": "peoria",
+  "short": "Historic downtown Peoria hotel blending classic style with modern amenities and proximity to the Civic Center and riverfront attractions.",
+  "description": "Peoria Marriott Pere Marquette is a landmark hotel in downtown Peoria offering upscale accommodations with modern amenities, an indoor pool, fitness center, on-site dining, and convenient access to the Peoria Civic Center, Riverfront Museum, and other local attractions. The hotel combines historic charm with contemporary comfort for both leisure and business stays.",
+  "address": "501 Main St, Peoria, IL 61602",
+  "website": "https://www.marriott.com/en-us/hotels/piamc-peoria-marriott-pere-marquette/overview/",
+  "tags": [
+    "hotel",
+    "downtown",
+    "historic",
+    "indoor pool",
+    "restaurant",
+    "event space",
+    "Peoria"
+  ],
+  "notes": "Front desk phone: (309) 637-6500. Features meeting/event spaces and is connected via skywalk to the Peoria Civic Center. :contentReference[oaicite:1]{index=1}"
+},
+  {
     "id": "peoria-proud",
     "name": "Peoria Proud",
     "category": "community",
@@ -690,6 +729,7 @@
     "notes": "Use the church website contact page for the most current phone/email and service times."
   }
 ]
+
 
 
 
