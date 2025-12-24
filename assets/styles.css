@@ -327,7 +327,7 @@ input:focus, select:focus, textarea:focus{
 .filters-meta{
   display:flex;
   align-items:center;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 10px;
   margin-top: 12px;
 }
@@ -434,4 +434,5 @@ input:focus, select:focus, textarea:focus{
 }
 .footer-links{ display:flex; gap: 12px; }
 .footer-links a{ color: var(--muted); }
+
 
