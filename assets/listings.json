@@ -355,7 +355,7 @@
   {
   "id": "il-pride-connect-legal-hotline",
   "name": "IL Pride Connect Legal Hotline",
-  "category": "support",
+  "category": "legal",
   "area": "statewide",
   "short": "Free, confidential legal information hotline for LGBTQIA+ people in Illinois.",
   "description": "The IL Pride Connect Legal Hotline offers free, confidential legal information and referrals for LGBTQIA+ individuals (and supportive family/friends) facing legal issues that impact health, safety, access to care, housing, identity documents, discrimination, public benefits, and more. Trained advocates provide one-time legal information consultations and can help connect callers with trusted legal partners across Illinois. :contentReference[oaicite:0]{index=0}",
@@ -714,5 +714,6 @@
     "notes": "Use the church website contact page for the most current phone/email and service times."
   }
 ]
+
 
 
