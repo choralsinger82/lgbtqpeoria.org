@@ -328,9 +328,8 @@ input:focus, select:focus, textarea:focus{
   display:flex;
   align-items:center;
   justify-content: space-between;
-  gap: 12px;
+  gap: 10px;
   margin-top: 12px;
-  flex-wrap: wrap;
 }
 
 .filters-left{
@@ -339,6 +338,35 @@ input:focus, select:focus, textarea:focus{
   gap: 12px;
   flex-wrap: wrap;
 }
+
+/* Events page: count+button left, checkbox right */
+.page-events .filters-meta{
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.page-events .filters-left{
+  display:flex;
+  align-items:center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Keep checkbox tight on Events page */
+.page-events .checkbox{
+  display:inline-flex;
+  align-items:center;
+  gap: 8px;
+  margin-left: auto;
+}
+
+.page-events .checkbox input[type="checkbox"]{
+  width: auto;
+  margin: 0;
+  padding: 0;
+}
+
 
 /* Fix checkbox spacing */
 .checkbox{
@@ -406,3 +434,4 @@ input:focus, select:focus, textarea:focus{
 }
 .footer-links{ display:flex; gap: 12px; }
 .footer-links a{ color: var(--muted); }
+
