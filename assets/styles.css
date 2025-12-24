@@ -323,15 +323,16 @@ input:focus, select:focus, textarea:focus{
   border-color: rgba(125,211,252,.55);
 }
 
-/* Filters footer row (count + submit on left, checkbox on right) */
+/* Filters footer row (directory default: count left, submit right) */
 .filters-meta{
   display:flex;
   align-items:center;
-  justify-content: flex-start;
+  justify-content: space-between;
   gap: 10px;
   margin-top: 12px;
 }
 
+/* Group used on Events page only */
 .filters-left{
   display:flex;
   align-items:center;
@@ -339,46 +340,28 @@ input:focus, select:focus, textarea:focus{
   flex-wrap: wrap;
 }
 
-/* Events page: count+button left, checkbox right */
+/* Events page layout: left group + checkbox on right */
 .page-events .filters-meta{
   justify-content: space-between;
   gap: 12px;
   flex-wrap: wrap;
 }
 
-.page-events .filters-left{
-  display:flex;
-  align-items:center;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
-/* Keep checkbox tight on Events page */
-.page-events .checkbox{
+/* Checkbox: keep the box and text tight everywhere */
+.checkbox{
   display:inline-flex;
   align-items:center;
   gap: 8px;
-  margin-left: auto;
-}
-
-.page-events .checkbox input[type="checkbox"]{
-  width: auto;
-  margin: 0;
-  padding: 0;
-}
-
-
-/* Fix checkbox spacing */
-.checkbox{
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  margin-left: auto;
 }
 .checkbox input[type="checkbox"]{
   width: auto;
   margin: 0;
   padding: 0;
+}
+
+/* Events only: push checkbox group to the far right */
+.page-events .checkbox{
+  margin-left: auto;
 }
 
 .listing-top{
@@ -434,5 +417,3 @@ input:focus, select:focus, textarea:focus{
 }
 .footer-links{ display:flex; gap: 12px; }
 .footer-links a{ color: var(--muted); }
-
-
