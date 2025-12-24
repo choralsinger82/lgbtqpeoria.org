@@ -323,13 +323,14 @@ input:focus, select:focus, textarea:focus{
   border-color: rgba(125,211,252,.55);
 }
 
-/* Filters footer row (directory default: count left, submit right) */
+/* Filters footer row (Directory default: count left, submit right) */
 .filters-meta{
   display:flex;
   align-items:center;
   justify-content: space-between;
   gap: 10px;
   margin-top: 12px;
+  flex-wrap: wrap;
 }
 
 /* Group used on Events page only */
