@@ -1,15 +1,15 @@
 [
   {
-    "name": "Peoria Pride Festival",
-    "date": "2026-06-28",
-    "time": "11:00 AM – 5:00 PM",
-    "time_start": "11:00",
-    "time_end": "17:00",
-    "location": "Downtown Peoria Riverfront",
-    "website": "https://peoriapride.org",
-    "tickets": "",
-    "description": "An all-ages Pride celebration featuring live music, local vendors, and community organizations.",
-    "tags": ["pride", "all-ages", "community"]
+    "name": "Midnight in Peoria: A NYE Celebration by Peoria Proud",
+    "date": "2025-12-31",
+    "time": "8:00 PM – 12:30 AM",
+    "time_start": "08:00",
+    "time_end": "00:30",
+    "location": "Embassy Suites by Hilton East Peoria Riverfront Hotel & Conference Center - 100 Conference Center Dr, East Peoria, IL 61611",
+    "website": "https://peoriaproud.org",
+    "tickets": "https://www.zeffy.com/en-US/ticketing/midnight-in-peoria-a-new-years-eve-celebration-by-peoria-proud",
+    "description": "General admission: $90. Couple's tickets: $160. Reserved table: $900. All proceeds from the NYE fundraiser will directly go towards Peoria Proud's two new community relief funds in 2026: The Sustainability Fund and The Growth Fund. For more details visit https://www.facebook.com/share/1GpnrRBJMF/",
+    "tags": ["nye", "Peoria Proud", "community"]
   },
   {
     "name": "Trans & Nonbinary Support Group",
