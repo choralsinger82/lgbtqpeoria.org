@@ -513,6 +513,25 @@
     "notes": "Contact email: admin@peoriaproud.org."
   },
   {
+  "id": "pflag-peoria",
+  "name": "PFLAG Peoria",
+  "category": "support",
+  "area": "peoria",
+  "short": "Local chapter of PFLAG offering support, education, and advocacy for LGBTQ+ people, families, and allies in the Peoria area.",
+  "description": "PFLAG Peoria is a local chapter of the national PFLAG organization dedicated to providing support, education, and advocacy for LGBTQ+ individuals, their families, and allies. They host monthly support meetings, youth programming such as the Q Collective, and collaborate with community partners to promote acceptance, understanding, and inclusion throughout Greater Peoria.",
+  "address": "Peoria, IL",
+  "website": "https://pflagpeoria.org/",
+  "tags": [
+    "LGBTQ+ support",
+    "family support",
+    "advocacy",
+    "community",
+    "education",
+    "Peoria"
+  ],
+  "notes": "PFLAG Peoria meets monthly and partners with local organizations for meeting space. Reach out to PFLAG Peoria directly for the current meeting location, date, and time."
+},
+  {
     "id": "positive-health-solutions",
     "name": "Positive Health Solutions",
     "category": "health",
@@ -671,6 +690,7 @@
     "notes": "Use the church website contact page for the most current phone/email and service times."
   }
 ]
+
 
 
 
