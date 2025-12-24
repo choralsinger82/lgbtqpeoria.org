@@ -353,6 +353,25 @@
     "notes": "Call or text: (309) 264-1097 • Email: hotshot.hvac@gmail.com"
   },
   {
+  "id": "il-pride-connect-legal-hotline",
+  "name": "IL Pride Connect Legal Hotline",
+  "category": "support",
+  "area": "statewide",
+  "short": "Free, confidential legal information hotline for LGBTQIA+ people in Illinois.",
+  "description": "The IL Pride Connect Legal Hotline offers free, confidential legal information and referrals for LGBTQIA+ individuals (and supportive family/friends) facing legal issues that impact health, safety, access to care, housing, identity documents, discrimination, public benefits, and more. Trained advocates provide one-time legal information consultations and can help connect callers with trusted legal partners across Illinois. :contentReference[oaicite:0]{index=0}",
+  "address": "Statewide",
+  "website": "https://www.ilprideconnect.org/legal-hotline",
+  "tags": [
+    "legal support",
+    "LGBTQ+ rights",
+    "legal hotline",
+    "referrals",
+    "information",
+    "statewide"
+  ],
+  "notes": "Call free at 855-805-9200 (Monday–Thursday, 9 AM–4 PM CST). Services in English and Spanish; callers outside hours can leave confidential voicemail for callback. Hotline provides information and referrals — not ongoing representation. :contentReference[oaicite:1]{index=1}"
+},
+  {
     "id": "imago-dei-church-peoria",
     "name": "Imago Dei Church",
     "category": "faith",
@@ -695,4 +714,5 @@
     "notes": "Use the church website contact page for the most current phone/email and service times."
   }
 ]
+
 
