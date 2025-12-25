@@ -219,8 +219,9 @@ h2{ margin: 0 0 10px; font-size: 20px; }
   margin: 0 0 14px;
 }
 
+/* UPDATED: bigger logo, responsive so it feels “featured” without taking over */
 .hero-logo{
-  width: 140px;
+  width: clamp(170px, 18vw, 250px);
   height: auto;
   display: block;
   filter: drop-shadow(0 18px 40px rgba(0,0,0,.45));
@@ -249,8 +250,10 @@ h2{ margin: 0 0 10px; font-size: 20px; }
     grid-template-columns: 1fr;
     justify-items: start;
   }
+
+  /* UPDATED: don’t shrink too far on small screens */
   .hero-logo{
-    width: 110px;
+    width: clamp(150px, 38vw, 220px);
   }
 }
 
