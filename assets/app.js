@@ -2,10 +2,10 @@
   const resultsEl = document.getElementById("results");
   const qEl = document.getElementById("q");
   const catEl = document.getElementById("category");
-  const featureEl = document.getElementById("feature");
   const countEl = document.getElementById("count");
 
-  if (!resultsEl || !qEl || !catEl || !featureEl || !countEl) return;
+  // Removed featureEl requirement (Services dropdown no longer exists)
+  if (!resultsEl || !qEl || !catEl || !countEl) return;
 
   function normalize(s) {
     return (s || "")
@@ -15,10 +15,20 @@
       .trim();
   }
 
+  // A slightly more aggressive normalizer for tags so matching is forgiving
+  function normalizeTag(s) {
+    return (s || "")
+      .toString()
+      .toLowerCase()
+      .replace(/&/g, "and")
+      .replace(/\/+/g, " ")
+      .replace(/[^a-z0-9 ]/g, " ")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
   function fromHash() {
-    // Supports links like:
-    // directory.html#cat=health
-    // directory.html#feature=gender-affirming
+    // Supports links like: directory.html#cat=health
     const hash = window.location.hash.replace(/^#/, "");
     const params = new URLSearchParams(hash);
 
@@ -26,20 +36,10 @@
     if (cat && [...catEl.options].some(o => o.value === cat)) {
       catEl.value = cat;
     }
-
-    const feature = params.get("feature");
-    if (feature && [...featureEl.options].some(o => o.value === feature)) {
-      featureEl.value = feature;
-    }
   }
 
-  function matchesFilters(item, q, cat, feature) {
+  function matchesFilters(item, q, cat) {
     if (cat !== "all" && item.category !== cat) return false;
-
-    if (feature !== "all") {
-      const feats = Array.isArray(item.features) ? item.features : [];
-      if (!feats.includes(feature)) return false;
-    }
 
     if (!q) return true;
 
@@ -51,8 +51,7 @@
       item.category,
       // Keep area searchable even though it’s not a filter:
       item.area,
-      (item.tags || []).join(" "),
-      (item.features || []).join(" ")
+      (item.tags || []).join(" ")
     ].join(" "));
 
     return hay.includes(q);
@@ -63,6 +62,26 @@
     span.className = `pill${extraClass ? " " + extraClass : ""}`;
     span.textContent = text;
     return span;
+  }
+
+  // Optional: derive “service-ish” badges from tags (no schema changes required).
+  // If you don’t want these at all, you can delete the whole function and the call to it.
+  function derivedBadgesFromTags(tags) {
+    const t = (tags || []).map(normalizeTag).join(" ");
+
+    const out = [];
+    if (t.includes("gender affirming")) out.push("Gender-Affirming");
+    if (t.includes("hiv") || t.includes("sti")) out.push("HIV/STI");
+    if (t.includes("prep") || t.includes("pep")) out.push("PrEP/PEP");
+    if (t.includes("prevention")) out.push("Prevention");
+    if (t.includes("sexual health")) out.push("Sexual Health");
+    if (t.includes("counseling") || t.includes("therapy")) out.push("Counseling");
+    if (t.includes("case management")) out.push("Case Mgmt");
+    if (t.includes("trans health navigation") || t.includes("trans navigation")) out.push("Trans Navigation");
+    if (t.includes("community center")) out.push("Community Center");
+
+    // de-dupe while preserving order
+    return [...new Set(out)];
   }
 
   function render(items) {
@@ -96,17 +115,9 @@
       // Always show category
       meta.appendChild(badge(labelCategory(item.category)));
 
-      // Feature highlight badges
-      const feats = Array.isArray(item.features) ? item.features : [];
-      if (feats.includes("gender-affirming")) meta.appendChild(badge("Gender-Affirming"));
-      if (feats.includes("hiv-sti")) meta.appendChild(badge("HIV/STI"));
-      if (feats.includes("prevention")) meta.appendChild(badge("Prevention"));
-      if (feats.includes("sexual-health")) meta.appendChild(badge("Sexual Health"));
-      if (feats.includes("prep-pep")) meta.appendChild(badge("PrEP/PEP"));
-      if (feats.includes("counseling")) meta.appendChild(badge("Counseling"));
-      if (feats.includes("case-management")) meta.appendChild(badge("Case Mgmt"));
-      if (feats.includes("trans-navigation")) meta.appendChild(badge("Trans Navigation"));
-      if (feats.includes("community-center")) meta.appendChild(badge("Community Center"));
+      // Optional: add derived badges based on tags
+      const derived = derivedBadgesFromTags(item.tags);
+      for (const b of derived) meta.appendChild(badge(b));
 
       top.appendChild(title);
       top.appendChild(meta);
@@ -152,7 +163,13 @@
           tag.className = "tag";
           tag.textContent = t;
 
-          if (t.endsWith("-owned")) {
+          // Make ownership highlight more forgiving:
+          // - supports "queer-owned" style
+          // - also supports "Queer-owned" / "Queer Owned" etc
+          const tn = normalizeTag(t);
+          if (tn.endsWith(" owned")) {
+            tag.dataset.owner = "true";
+          } else if (t.toString().toLowerCase().endsWith("-owned")) {
             tag.dataset.owner = "true";
           }
 
@@ -212,16 +229,14 @@
   function update() {
     const q = normalize(qEl.value);
     const cat = catEl.value;
-    const feature = featureEl.value;
 
-    const filtered = all.filter(item => matchesFilters(item, q, cat, feature));
+    const filtered = all.filter(item => matchesFilters(item, q, cat));
     countEl.textContent = `${filtered.length} listing${filtered.length === 1 ? "" : "s"} shown`;
     render(filtered);
   }
 
   qEl.addEventListener("input", update);
   catEl.addEventListener("change", update);
-  featureEl.addEventListener("change", update);
 
   update();
 })();
