@@ -52,6 +52,26 @@
     ],
     "notes": "Event nights and hours may vary."
   },
+    {
+    "id": "blue-orchid",
+    "name": "Blue Orchid Event Planning",
+    "category": "businesses",
+    "area": "peoria",
+    "short": "LGBTQ+ and woman owned wedding & event planning/coordination.",
+  "description": "Blue Orchid Event Planning provides professional planning services for weddings, private celebrations, parties, and other special events. Led by a Certified Bridal Consultant, the team focuses on thoughtful detail, organization, and seamless execution so clients can enjoy their day without stress. Services include full wedding planning, partial planning, day-of coordination, consultations, and party planning, tailored to each client’s needs.",
+    "address": "Peoria, IL",
+    "website": "https://blueorchideventplanning.weebly.com/,
+    "tags": [
+    "queer-owned",
+    "woman-owned",
+    "event planning",
+    "wedding",
+    "birthday",
+    "anniversary",
+    "celebrations",    
+    ],
+    "notes": "Contact via website for quotes and availability."
+  },
   {
     "id": "the-bridge-umc-washington",
     "name": "The Bridge United Methodist Church (Washington)",
@@ -388,6 +408,28 @@
     ],
     "notes": "Use the church website contact page for the most current phone/email and service times."
   },
+
+  {
+    "id": "massage-by-jaysen",
+    "name": "Inclusive Massage by Jaysen Ryan",
+    "category": "health",
+    "area": "peoria",
+    "short": "LGBTQIA+ inclusive massage therapy in Peoria offering Swedish and hot stone massage by appointment.",
+  "description": "Inclusive Massage by Jaysen Ryan is a Peoria-based massage practice offering Swedish massage (30/60/90 minutes) and hot stone massage (60/90 minutes). Sessions are booked online and tailored to client comfort, with a focus on creating an affirming, inclusive experience.",
+    "address": "Peoria, IL",
+    "website": "https://blueorchideventplanning.weebly.com/,
+  "tags": [
+    "queer-owned",
+    "inclusive",
+    "massage therapy",
+    "Swedish massage",
+    "hot stones",
+    "by appointment",
+    "Peoria"
+  ],
+  "notes": "By appointment only (no walk-ins). Book online via GlossGenius. Phone: (309) 750-7353."
+},	
+  
   {
     "id": "jewish-federation-of-peoria",
     "name": "Jewish Federation of Peoria",
@@ -659,6 +701,23 @@
     ],
     "notes": "Use the church website contact page for the most current phone/email and service times."
   },
+    {
+    "id": "ceremonies-by-tonya",
+    "name": "Sweet & Simple Ceremonies by Tonya",
+    "category": "community",
+    "area": "peoria",
+    "short": "Wedding officiant in the greater Peoria area.",
+    "description": "Wedding officiant performing non-religious ceremonies focusing on love and the relationship and enjoy incorporating unique ideas into ceremonies. There are a variety of scripts to choose from or a custom one can be created specific to the ceremony. A typical ceremony lasts around 15 minutes. Sweet and simple!",
+    "address": "Greater Peoria area",
+    "website": "https://www.sweetsimpleceremoniestonya.com/",
+    "tags": [
+      "weddings",
+      "officiant",
+      "non-religious",
+      "ceremonies"
+    ],
+    "notes": "Email sweetandsimpleceremonies@gmail.com to book Tonya or for more information."
+  },
   {
     "id": "tartan-inn-west-peoria",
     "name": "Tartan Inn",
@@ -715,6 +774,7 @@
     "notes": "Use the church website contact page for the most current phone/email and service times."
   }
 ]
+
 
 
 
