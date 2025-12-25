@@ -221,7 +221,7 @@ h2{ margin: 0 0 10px; font-size: 20px; }
 
 /* UPDATED: bigger logo, responsive so it feels “featured” without taking over */
 .hero-logo{
-  width: clamp(170px, 18vw, 500px);
+  width: clamp(170px, 18vw, 700px);
   height: auto;
   display: block;
   filter: drop-shadow(0 18px 40px rgba(0,0,0,.45));
@@ -466,6 +466,7 @@ input:focus, select:focus, textarea:focus{
 }
 .footer-links{ display:flex; gap: 12px; }
 .footer-links a{ color: var(--muted); }
+
 
 
 
