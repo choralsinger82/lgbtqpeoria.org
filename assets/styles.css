@@ -239,6 +239,10 @@ h2{ margin: 0 0 10px; font-size: 20px; }
   margin: 0;
 }
 
+.hero-lockup-text{
+  max-width: 60ch;
+}
+
 @keyframes heroLogoIn{
   from { opacity: 0; transform: translateY(10px); }
   to   { opacity: 1; transform: translateY(0); }
@@ -465,3 +469,4 @@ input:focus, select:focus, textarea:focus{
 }
 .footer-links{ display:flex; gap: 12px; }
 .footer-links a{ color: var(--muted); }
+
