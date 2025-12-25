@@ -72,8 +72,8 @@ code{ font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liber
   min-width: 220px;
 }
 .brand-mark {
-  width: 72px;
-  height: 72px;
+  width: 90px;
+  height: 90px;
   flex-shrink: 0;
   display: grid;
   place-items: center;
@@ -418,4 +418,5 @@ input:focus, select:focus, textarea:focus{
 }
 .footer-links{ display:flex; gap: 12px; }
 .footer-links a{ color: var(--muted); }
+
 
