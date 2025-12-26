@@ -509,6 +509,21 @@
     "notes": "Good option for low-key evenings. Hours may vary by day."
   },
   {
+    "id": "lbgtq-peoria-facebook",
+    "name": "LGBTQ Peoria Facebook Group",
+    "category": "community",
+    "area": "central-il",
+    "short": "Nightlife bar and dance spot with a diverse and social crowd in Bloomington.",
+    "description": "LGBTQ Peoria is a queer community-led place to connect, celebrate, and get to know the LGBTQ+ community in Peoria, it's neighboring towns, and other parts of central Illinois! Allies are welcome! They occasionally host gatherings and other community events that bring together people of all races, nationalities, sexualities, and gender identities. For LGBTQ+ folks, this is a safe space to meet your peers and where all can feel comfortable! All members of the community and its allies are invited to come join, as well as invite others you know who are looking for an awesome and inclusive community!",
+    "address": "Peoria and Central Illinois",
+    "website": "https://www.facebook.com/groups/lgbtqpeoria",
+    "tags": [
+      "queer-led",
+      "inclusive",
+      "town hall",
+      "Facebook"
+    ],
+  {
     "id": "lit-on-fire-books",
     "name": "Lit. on Fire Books",
     "category": "businesses",
@@ -774,6 +789,7 @@
     "notes": "Use the church website contact page for the most current phone/email and service times."
   }
 ]
+
 
 
 
