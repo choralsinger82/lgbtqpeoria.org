@@ -33,7 +33,7 @@
     const params = new URLSearchParams(hash);
 
     const cat = params.get("cat");
-    if (cat && [...catEl.options].some(o => o.value === cat)) {
+    if (cat && [...catEl.options].some((o) => o.value === cat)) {
       catEl.value = cat;
     }
   }
@@ -43,16 +43,18 @@
 
     if (!q) return true;
 
-    const hay = normalize([
-      item.name,
-      item.short,
-      item.description,
-      item.address,
-      item.category,
-      // Keep area searchable even though it’s not a filter:
-      item.area,
-      (item.tags || []).join(" ")
-    ].join(" "));
+    const hay = normalize(
+      [
+        item.name,
+        item.short,
+        item.description,
+        item.address,
+        item.category,
+        // Keep area searchable even though it’s not a filter:
+        item.area,
+        (item.tags || []).join(" "),
+      ].join(" ")
+    );
 
     return hay.includes(q);
   }
@@ -64,25 +66,8 @@
     return span;
   }
 
-  // Optional: derive “service-ish” badges from tags (no schema changes required).
-  // If you don’t want these at all, you can delete the whole function and the call to it.
-  function derivedBadgesFromTags(tags) {
-    const t = (tags || []).map(normalizeTag).join(" ");
-
-    const out = [];
-    if (t.includes("gender affirming")) out.push("Gender-Affirming");
-    if (t.includes("hiv") || t.includes("sti")) out.push("HIV/STI");
-    if (t.includes("prep") || t.includes("pep")) out.push("PrEP/PEP");
-    if (t.includes("prevention")) out.push("Prevention");
-    if (t.includes("sexual health")) out.push("Sexual Health");
-    if (t.includes("counseling") || t.includes("therapy")) out.push("Counseling");
-    if (t.includes("case management")) out.push("Case Mgmt");
-    if (t.includes("trans health navigation") || t.includes("trans navigation")) out.push("Trans Navigation");
-    if (t.includes("community center")) out.push("Community Center");
-
-    // de-dupe while preserving order
-    return [...new Set(out)];
-  }
+  // NOTE: Top-right pills are category-only.
+  // We intentionally do NOT derive additional pills from tags.
 
   function render(items) {
     resultsEl.innerHTML = "";
@@ -112,12 +97,8 @@
       const meta = document.createElement("div");
       meta.className = "listing-meta";
 
-      // Always show category
+      // Category-only pill
       meta.appendChild(badge(labelCategory(item.category)));
-
-      // Optional: add derived badges based on tags
-      const derived = derivedBadgesFromTags(item.tags);
-      for (const b of derived) meta.appendChild(badge(b));
 
       top.appendChild(title);
       top.appendChild(meta);
@@ -137,7 +118,11 @@
 
       if (item.website) {
         const p = document.createElement("p");
-        p.innerHTML = `<strong>Website:</strong> <a href="${escapeAttr(item.website)}" target="_blank" rel="noopener noreferrer">${escapeHtml(item.website)}</a>`;
+        p.innerHTML = `<strong>Website:</strong> <a href="${escapeAttr(
+          item.website
+        )}" target="_blank" rel="noopener noreferrer">${escapeHtml(
+          item.website
+        )}</a>`;
         details.appendChild(p);
       }
 
@@ -196,13 +181,14 @@
       businesses: "Businesses",
       nightlife: "Nightlife",
       events: "Events",
-      faith: "Faith & Spiritual"
+      faith: "Faith & Spiritual",
     };
     return map[cat] || cat;
   }
 
   function escapeHtml(str) {
-    return (str || "").toString()
+    return (str || "")
+      .toString()
       .replaceAll("&", "&amp;")
       .replaceAll("<", "&lt;")
       .replaceAll(">", "&gt;")
@@ -230,8 +216,10 @@
     const q = normalize(qEl.value);
     const cat = catEl.value;
 
-    const filtered = all.filter(item => matchesFilters(item, q, cat));
-    countEl.textContent = `${filtered.length} listing${filtered.length === 1 ? "" : "s"} shown`;
+    const filtered = all.filter((item) => matchesFilters(item, q, cat));
+    countEl.textContent = `${filtered.length} listing${
+      filtered.length === 1 ? "" : "s"
+    } shown`;
     render(filtered);
   }
 
