@@ -106,10 +106,28 @@ code{ font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liber
   border: 1px solid transparent;
   color: var(--muted);
 }
+
+/* UPDATED: current page pill + rainbow underline */
 .nav a[aria-current="page"]{
   color: var(--text);
   border-color: var(--border);
   background: rgba(255,255,255,.06);
+  border-radius: 999px;        /* pill shape */
+  position: relative;          /* enables underline pseudo-element */
+  padding: 8px 12px;           /* slightly roomier */
+}
+.nav a[aria-current="page"]::after{
+  content:"";
+  position:absolute;
+  left:12px;
+  right:12px;
+  bottom:6px;
+  height:3px;
+  border-radius:999px;
+  background: linear-gradient(90deg,
+    #ff3b30, #ff9f0a, #ffd60a, #34c759, #64d2ff, #0a84ff, #bf5af2
+  );
+  opacity:.70;
 }
 
 /* Desktop link row + mobile dropdown */
@@ -239,7 +257,6 @@ h2{ margin: 0 0 10px; font-size: 20px; }
   margin: 0;
 }
 
-
 @keyframes heroLogoIn{
   from { opacity: 0; transform: translateY(10px); }
   to   { opacity: 1; transform: translateY(0); }
@@ -269,6 +286,25 @@ h2{ margin: 0 0 10px; font-size: 20px; }
   box-shadow: var(--shadow);
 }
 .cards{ display: grid; gap: 14px; margin: 14px 0; }
+
+/* NEW: vertical rainbow thread ONLY on listing cards */
+.cards .card{
+  position: relative;
+  overflow: hidden;
+  padding-left: 24px; /* makes room for the rainbow */
+}
+.cards .card::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:0;
+  bottom:0;
+  width:6px;
+  background: linear-gradient(180deg,
+    #ff3b30, #ff9f0a, #ffd60a, #34c759, #64d2ff, #0a84ff, #bf5af2
+  );
+  opacity:.60;
+}
 
 .grid-2{
   display:grid;
@@ -466,9 +502,3 @@ input:focus, select:focus, textarea:focus{
 }
 .footer-links{ display:flex; gap: 12px; }
 .footer-links a{ color: var(--muted); }
-
-
-
-
-
-
