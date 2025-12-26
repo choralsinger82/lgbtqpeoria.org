@@ -523,6 +523,8 @@
       "town hall",
       "Facebook"
     ],
+    "notes": "This is a private Facebook group and membership is subject to approval by admin and moderators based on answers to membership questions. The group is private for the safety and privacy of its members to ensure it is a safe space."
+  },
   {
     "id": "lit-on-fire-books",
     "name": "Lit. on Fire Books",
@@ -789,6 +791,7 @@
     "notes": "Use the church website contact page for the most current phone/email and service times."
   }
 ]
+
 
 
 
