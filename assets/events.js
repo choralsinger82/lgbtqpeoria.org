@@ -72,22 +72,6 @@
   }
 
   // --- Recurrence expansion ---
-  // Supported recurrence (your existing schema):
-  // recurrence: {
-  //   freq: "weekly" | "monthly_date" | "monthly_nth",
-  //   interval: 1, // optional, default 1
-  //   // weekly:
-  //   byweekday: ["MO","TU","WE","TH","FR","SA","SU"],
-  //   // monthly_date:
-  //   bymonthday: 15,
-  //   // monthly_nth:
-  //   weekday: "TH",
-  //   nth: 3,
-  //   until: "YYYY-MM-DD"
-  // }
-  //
-  // Anchor (recommended for correct interval behavior across months):
-  // - event.start_date: "YYYY-MM-DD" (first occurrence)
   const weekdayMap = { SU: 0, MO: 1, TU: 2, WE: 3, TH: 4, FR: 5, SA: 6 };
 
   function clampUntilDate(untilStr) {
@@ -113,12 +97,10 @@
   }
 
   function monthsBetween(a, b) {
-    // a, b are Date at noon
     return (b.getFullYear() - a.getFullYear()) * 12 + (b.getMonth() - a.getMonth());
   }
 
   function weeksBetween(a, b) {
-    // both noon, rough whole-week difference
     const ms = b.getTime() - a.getTime();
     return Math.floor(ms / (7 * 24 * 60 * 60 * 1000));
   }
@@ -130,7 +112,6 @@
     const interval = rec.interval && Number.isFinite(rec.interval) ? rec.interval : 1;
     const until = clampUntilDate(rec.until);
 
-    // Anchor for interval correctness:
     const anchorStr = baseEvent.start_date || baseEvent.date || "";
     const anchor = parseDateOnly(anchorStr);
 
@@ -152,7 +133,6 @@
         while (cursor.getTime() <= effectiveEnd.getTime()) {
           const dow = cursor.getDay();
           if (weekdayNums.includes(dow)) {
-            // Interval anchored to anchor date (if provided), otherwise monthStart fallback
             const anchorForWeeks = anchor || monthStart;
             const w = weeksBetween(anchorForWeeks, cursor);
             if (w >= 0 && (w % interval === 0)) {
@@ -172,7 +152,6 @@
         if (dt.getMonth() !== (m1 - 1)) continue;
         if (until && dt.getTime() > until.getTime()) continue;
 
-        // Interval anchored to anchor date (if provided), otherwise January fallback
         if (anchor) {
           const diff = monthsBetween(anchor, dt);
           if (diff < 0 || diff % interval !== 0) continue;
@@ -194,7 +173,6 @@
         if (!dt) continue;
         if (until && dt.getTime() > until.getTime()) continue;
 
-        // Interval anchored to anchor date (if provided)
         if (anchor) {
           const diff = monthsBetween(anchor, dt);
           if (diff < 0 || diff % interval !== 0) continue;
@@ -212,11 +190,7 @@
   }
 
   function makeOccurrence(baseEvent, dateISO) {
-    return {
-      ...baseEvent,
-      date: dateISO,
-      _occurrence: true
-    };
+    return { ...baseEvent, date: dateISO, _occurrence: true };
   }
 
   // --- Calendar links ---
@@ -259,12 +233,9 @@
       const t = parseTimeHM(ev.time_start);
       const local = new Date(d.getFullYear(), d.getMonth(), d.getDate(), t.h, t.mi, 0, 0);
       local.setMinutes(local.getMinutes() + 60);
-      const yyyy = local.getUTCFullYear();
-      const mm = String(local.getUTCMonth() + 1).padStart(2, "0");
-      const dd = String(local.getUTCDate()).padStart(2, "0");
-      const HH = String(local.getUTCHours()).padStart(2, "0");
-      const MM = String(local.getUTCMinutes()).padStart(2, "0");
-      endUTC = `${yyyy}${mm}${dd}T${HH}${MM}00Z`;
+      endUTC =
+        `${local.getUTCFullYear()}${String(local.getUTCMonth() + 1).padStart(2, "0")}${String(local.getUTCDate()).padStart(2, "0")}T` +
+        `${String(local.getUTCHours()).padStart(2, "0")}${String(local.getUTCMinutes()).padStart(2, "0")}00Z`;
     }
 
     const params = new URLSearchParams({
@@ -295,12 +266,9 @@
       const t = parseTimeHM(ev.time_start);
       const local = new Date(d.getFullYear(), d.getMonth(), d.getDate(), t.h, t.mi, 0, 0);
       local.setMinutes(local.getMinutes() + 60);
-      const yyyy = local.getUTCFullYear();
-      const mm = String(local.getUTCMonth() + 1).padStart(2, "0");
-      const dd = String(local.getUTCDate()).padStart(2, "0");
-      const HH = String(local.getUTCHours()).padStart(2, "0");
-      const MM = String(local.getUTCMinutes()).padStart(2, "0");
-      dtEnd = `${yyyy}${mm}${dd}T${HH}${MM}00Z`;
+      dtEnd =
+        `${local.getUTCFullYear()}${String(local.getUTCMonth() + 1).padStart(2, "0")}${String(local.getUTCDate()).padStart(2, "0")}T` +
+        `${String(local.getUTCHours()).padStart(2, "0")}${String(local.getUTCMinutes()).padStart(2, "0")}00Z`;
     }
 
     const uid = `${normalize(title).slice(0, 30)}-${ev.date}-${Math.random().toString(16).slice(2)}@lgbtqpeoria.org`;
@@ -434,7 +402,6 @@
         details.appendChild(p);
       }
 
-      // Calendar links
       if (ev.time_start) {
         const calRow = document.createElement("p");
         const gcal = buildGoogleCalendarUrl(ev);
@@ -514,18 +481,13 @@
       }
     }
 
-    // Keep within a sane band (prevents weird typos from exploding the dropdown)
     minY = Math.max(minY, nowY - 1);
     maxY = Math.min(maxY, nowY + 5);
 
-    const existingAll = [...yearEl.options].some(o => o.value === "all");
     yearEl.innerHTML = "";
-    if (!existingAll) {
-      const opt = document.createElement("option");
-      opt.value = "all";
-      opt.textContent = "All";
-      yearEl.appendChild(opt);
-    } else {
+
+    // Always include "All" first
+    {
       const opt = document.createElement("option");
       opt.value = "all";
       opt.textContent = "All";
@@ -564,14 +526,10 @@
     return expanded;
   }
 
-  // Default month/year to current if options exist
+  // ✅ Default month/year to "All"
   (function setDefaultMonthYear() {
-    const now = new Date();
-    const currentMonth = String(now.getMonth() + 1);
-    const currentYear = String(now.getFullYear());
-
-    if ([...monthEl.options].some(o => o.value === currentMonth)) monthEl.value = currentMonth;
-    if ([...yearEl.options].some(o => o.value === currentYear)) yearEl.value = currentYear;
+    monthEl.selectedIndex = 0; // Month: "All"
+    yearEl.selectedIndex = 0;  // Year: "All"
   })();
 
   // Default: hide past
