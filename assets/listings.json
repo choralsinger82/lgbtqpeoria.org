@@ -36,6 +36,26 @@
     "notes": "Age policy is 19+. Check event listings for DJs and theme nights."
   },
   {
+    "id": "baked-bee",
+    "name": "The Baked Bee Home Bakery",
+    "category": "businesses",
+    "area": "peoria",
+    "short": "Local home bakery offering freshly made baked goods.",
+    "description": "The Baked Bee is a home-based bakery creating baked goods for the local community with passion and love. Orders are prepared in a home kitchen and shared through social media, making it easy to stay connected with new offerings and availability. It’s a sweet spot to discover homemade treats crafted with care.",
+    "address": "Peoria, IL",
+    "website": "https://linktr.ee/TheBakedBeeBakery",
+    "tags": [
+      "queer-owned",
+      "black-owned",
+      "woman-owned",
+      "disabled-owned",
+      "home-based",
+      "baked goods",
+      "desserts"      
+    ],
+    "notes": "Email: thebakedbeellc@gmail.com. Phone: 6018329004. Open 9am-6 pm Monday thru Saturday"
+  },
+  {
     "id": "the-bistro-bloomington",
     "name": "The Bistro (The B)",
     "category": "nightlife",
@@ -791,6 +811,7 @@
     "notes": "Use the church website contact page for the most current phone/email and service times."
   }
 ]
+
 
 
 
