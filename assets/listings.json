@@ -739,6 +739,25 @@
     "notes": "Use the church website contact page for the most current phone/email and service times."
   },
     {
+    "id": "studio-darkstone",
+    "name": "Studio Darkstone",
+    "category": "businesses",
+    "area": "peoria",
+    "short": "Honest photography celebrating love, identity, and connection. ",
+    "description": "Transgender photographer and new media artist specializing in events, weddings, concerts, and engagement shoots.",
+    "address": "Peoria, IL",
+    "website": "http://instagram.com/studiodarkstone/",
+    "tags": [
+      "transgender-owned",
+      "woman-owned",
+      "photography",
+      "events",
+      "celebrations",
+      "new media"
+    ],
+      "notes": "Email dawniadarkstone@gmail.com for more information."
+  },
+    {
     "id": "ceremonies-by-tonya",
     "name": "Sweet & Simple Ceremonies by Tonya",
     "category": "community",
@@ -811,6 +830,7 @@
     "notes": "Use the church website contact page for the most current phone/email and service times."
   }
 ]
+
 
 
 
