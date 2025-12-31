@@ -546,6 +546,26 @@
     "notes": "This is a private Facebook group and membership is subject to approval by admin and moderators based on answers to membership questions. The group is private for the safety and privacy of its members to ensure it is a safe space."
   },
   {
+  "id": "life-balance-counseling-peoria",
+  "name": "Life Balance Counseling",
+  "category": "health",
+  "area": "peoria",
+  "short": "Private counseling practice in Peoria offering individual therapy for adults, teens, and children.",
+  "description": "Life Balance Counseling is a Peoria-based private practice providing mental health counseling for individuals, adolescents, and children. Services focus on supporting clients through anxiety, depression, stress, life transitions, relationship challenges, and emotional well-being, with a compassionate, client-centered approach in a confidential setting.",
+  "address": "Peoria, IL",
+  "website": "https://www.lifebalancecounselingpeoria.com/",
+  "tags": [
+    "counseling",
+    "mental health",
+    "therapy",
+    "anxiety",
+    "depression",
+    "stress management",
+    "Peoria"
+  ],
+  "notes": "Visit the website for therapist bios, specialties, insurance information, and appointment requests."
+},
+  {
     "id": "lit-on-fire-books",
     "name": "Lit. on Fire Books",
     "category": "businesses",
@@ -831,15 +851,3 @@
     "notes": "Use the church website contact page for the most current phone/email and service times."
   }
 ]
-
-
-
-
-
-
-
-
-
-
-
-
