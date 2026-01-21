@@ -22,44 +22,5 @@
     "tickets": "https://www.perfectpotluck.com/ENXQ8261",
     "description": "Everyone is welcome to bring a side dish as the main dishes will be provided by Peoria Proud! Come together for some food and community! The tickets link is to sign yourself up for a dish. There is no cost associated with this event.",
     "tags": ["nye", "Peoria Proud", "community"]
-  },
-  {
-    "name": "Trans & Nonbinary Support Group",
-    "date": "",
-    "start_date": "2026-01-16",
-    "time": "6:30 PM – 8:00 PM",
-    "time_start": "18:30",
-    "time_end": "20:00",
-    "location": "Peoria, IL (see website for details)",
-    "website": "https://example.com/trans-group",
-    "tickets": "",
-    "description": "A confidential, peer-led support group for trans, nonbinary, and gender-questioning individuals.",
-    "tags": ["support-group", "trans", "nonbinary", "free"],
-    "recurrence": {
-      "freq": "monthly_nth",
-      "weekday": "TH",
-      "nth": 3,
-      "interval": 1,
-      "until": "2026-12-31"
-    }
-  },
-  {
-    "name": "Queer Game Night",
-    "date": "",
-    "start_date": "2026-01-07",
-    "time": "7:00 PM – 9:00 PM",
-    "time_start": "19:00",
-    "time_end": "21:00",
-    "location": "Peoria Public Library (Main)",
-    "website": "",
-    "tickets": "",
-    "description": "A casual community game night. Bring a game or jump into one on the table.",
-    "tags": ["community", "all-ages", "free"],
-    "recurrence": {
-      "freq": "weekly",
-      "byweekday": ["WE"],
-      "interval": 1,
-      "until": "2026-12-31"
-    }
   }
 ]
